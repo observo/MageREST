@@ -1,0 +1,14 @@
+<?php
+	/*
+		FORMAT
+		======
+		{
+		  "class_id": 0,
+		  "class_name": "string",
+		  "class_type": "string",
+		  "extension_attributes": {}
+		}
+		PARAMETERS
+		==========
+		taxClassId
+	*/

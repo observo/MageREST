@@ -1,0 +1,12 @@
+<?php
+	/*
+		PARAMETERS
+		==========
+		{
+		  "attributeSetId": 0,
+		  "attributeGroupId": 0,
+		  "attributeCode": "string",
+		  "sortOrder": 0
+		}
+		
+	*/

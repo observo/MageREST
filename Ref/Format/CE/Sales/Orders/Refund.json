@@ -1,0 +1,33 @@
+<?php
+	/*
+		PARAMETERS
+		==========
+		orderId
+		$body=
+			{
+			  "items": [
+				{
+				  "extension_attributes": {},
+				  "order_item_id": 0,
+				  "qty": 0
+				}
+			  ],
+			  "notify": true,
+			  "appendComment": true,
+			  "comment": {
+				"extension_attributes": {},
+				"comment": "string",
+				"is_visible_on_front": 0
+			  },
+			  "arguments": {
+				"shipping_amount": 0,
+				"adjustment_positive": 0,
+				"adjustment_negative": 0,
+				"extension_attributes": {
+				  "return_to_stock_items": [
+					0
+				  ]
+				}
+			  }
+			}
+	*/

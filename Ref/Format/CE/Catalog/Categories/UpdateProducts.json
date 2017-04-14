@@ -1,0 +1,15 @@
+<?php
+	/*
+		PARAMETERS
+		==========
+		categoryId
+		$body=
+			{
+			  "productLink": {
+				"sku": "string",
+				"position": 0,
+				"category_id": "string",
+				"extension_attributes": {}
+			  }
+			}
+	*/

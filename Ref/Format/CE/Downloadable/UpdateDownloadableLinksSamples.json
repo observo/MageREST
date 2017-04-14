@@ -1,0 +1,25 @@
+<?php
+	/*
+		PARAMETERS
+		==========
+		sku
+		id
+		$body=
+			{
+			  "sample": {
+				"id": 0,
+				"title": "string",
+				"sort_order": 0,
+				"sample_type": "string",
+				"sample_file": "string",
+				"sample_file_content": {
+				  "file_data": "string",
+				  "name": "string",
+				  "extension_attributes": {}
+				},
+				"sample_url": "string",
+				"extension_attributes": {}
+			  },
+			  "isGlobalScopeContent": true
+			}
+	*/

@@ -1,0 +1,22 @@
+<?php
+	/*
+		FORMAT
+		======
+		[
+		  {
+			"label": "string",
+			"value": "string",
+			"sort_order": 0,
+			"is_default": true,
+			"store_labels": [
+			  {
+				"store_id": 0,
+				"label": "string"
+			  }
+			]
+		  }
+		]
+		PARAMETERS
+		==========
+		attributeCode
+	*/

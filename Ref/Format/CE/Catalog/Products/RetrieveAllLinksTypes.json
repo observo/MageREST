@@ -1,0 +1,12 @@
+<?php
+	/*
+		FORMAT
+		======
+		[
+		  {
+			"code": 0,
+			"name": "string",
+			"extension_attributes": {}
+		  }
+		]
+	*/

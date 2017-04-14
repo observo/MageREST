@@ -1,0 +1,21 @@
+<?php
+	/*
+		FORMAT
+		======
+		{
+		  "coupon_id": 0,
+		  "rule_id": 0,
+		  "code": "string",
+		  "usage_limit": 0,
+		  "usage_per_customer": 0,
+		  "times_used": 0,
+		  "expiration_date": "string",
+		  "is_primary": true,
+		  "created_at": "string",
+		  "type": 0,
+		  "extension_attributes": {}
+		}
+		PARAMETERS
+		==========
+		couponId
+	*/

@@ -1,0 +1,35 @@
+<?php
+	/*
+		FORMAT
+		======
+		{
+		  "product_sku": "string",
+		  "option_id": 0,
+		  "title": "string",
+		  "type": "string",
+		  "sort_order": 0,
+		  "is_require": true,
+		  "price": 0,
+		  "price_type": "string",
+		  "sku": "string",
+		  "file_extension": "string",
+		  "max_characters": 0,
+		  "image_size_x": 0,
+		  "image_size_y": 0,
+		  "values": [
+			{
+			  "title": "string",
+			  "sort_order": 0,
+			  "price": 0,
+			  "price_type": "string",
+			  "sku": "string",
+			  "option_type_id": 0
+			}
+		  ],
+		  "extension_attributes": {}
+		}
+		PARAMETERS
+		==========
+		sku
+		optionId
+	*/

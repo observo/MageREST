@@ -1,0 +1,27 @@
+<?php
+	/*
+		PARAMETERS
+		==========
+		orderId
+		$body=
+			{
+			  "capture": true,
+			  "items": [
+				{
+				  "extension_attributes": {},
+				  "order_item_id": 0,
+				  "qty": 0
+				}
+			  ],
+			  "notify": true,
+			  "appendComment": true,
+			  "comment": {
+				"extension_attributes": {},
+				"comment": "string",
+				"is_visible_on_front": 0
+			  },
+			  "arguments": {
+				"extension_attributes": {}
+			  }
+			}
+	*/

@@ -1,0 +1,49 @@
+<?php
+	/*
+		FORMAT
+		======
+		{
+		  "items": [
+			{
+			  "id": 0,
+			  "identifier": "string",
+			  "title": "string",
+			  "content": "string",
+			  "creation_time": "string",
+			  "update_time": "string",
+			  "active": true
+			}
+		  ],
+		  "search_criteria": {
+			"filter_groups": [
+			  {
+				"filters": [
+				  {
+					"field": "string",
+					"value": "string",
+					"condition_type": "string"
+				  }
+				]
+			  }
+			],
+			"sort_orders": [
+			  {
+				"field": "string",
+				"direction": "string"
+			  }
+			],
+			"page_size": 0,
+			"current_page": 0
+		  },
+		  "total_count": 0
+		}
+		PARAMETERS
+		==========
+		searchCriteria[filterGroups][][filters][][field]
+		searchCriteria[filterGroups][][filters][][value]
+		searchCriteria[filterGroups][][filters][][conditionType]
+		searchCriteria[sortOrders][][field]
+		searchCriteria[sortOrders][][direction]
+		searchCriteria[pageSize]
+		searchCriteria[currentPage]
+	*/

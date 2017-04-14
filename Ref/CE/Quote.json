@@ -1,0 +1,612 @@
+{
+	'module'	: {
+		'name'   : 'Quote',
+		'service'	: [
+			{
+				'name'		: 'quoteBillingAddressManagementV1',
+				'methods'	: [				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/carts/:cartId/billing-address',
+						'partition'		: 'CE/Quote/Carts',
+						'method'		: 'RetrieveAllBillingAddress',
+						'note'			: '',
+						'description'	: ''
+					},				   
+					{
+						'verb'			: 'POST',
+						'endpoint'		: '/V1/carts/:cartId/billing-address',
+						'partition'		: 'CE/Quote/Carts',
+						'method'		: 'CreateBillingAddress',
+						'note'			: '',
+						'description'	: ''
+					},				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/carts/mine/billing-address',
+						'partition'		: 'CE/Quote/Carts',
+						'method'		: 'RetrieveAllMineBillingAddress',
+						'note'			: '',
+						'description'	: ''
+					},				   
+					{
+						'verb'			: 'POST',
+						'endpoint'		: '/V1/carts/mine/billing-address',
+						'partition'		: 'CE/Quote/Carts',
+						'method'		: 'CreateMineBillingAddress',
+						'note'			: '',
+						'description'	: ''
+					}
+				]
+			},
+			{
+				'name'		: 'quoteCartItemRepositoryV1',
+				'methods'	: [				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/carts/:cartId/items',
+						'partition'		: 'CE/Quote/Carts',
+						'method'		: 'RetrieveAllItemsByCartId',
+						'note'			: '',
+						'description'	: ''
+					},				   
+					{
+						'verb'			: 'POST',
+						'endpoint'		: '/V1/carts/:quoteId/items',
+						'partition'		: 'CE/Quote/Carts',
+						'method'		: 'CreateItemsByQuoteId',
+						'note'			: '',
+						'description'	: ''
+					},				 
+					{
+						'verb'			: 'DELETE',
+						'endpoint'		: '/V1/carts/:cartId/items/:itemId',
+						'partition'		: 'CE/Quote/Carts',
+						'method'		: 'RemoveItems',
+						'note'			: '',
+						'description'	: ''
+					},				    
+					{
+						'verb'			: 'PUT',
+						'endpoint'		: '/V1/carts/:cartId/items/:itemId',
+						'partition'		: 'CE/Quote/Carts',
+						'method'		: 'UpdateItems',
+						'note'			: '',
+						'description'	: ''
+					},				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/carts/mine/items',
+						'partition'		: 'CE/Quote/Carts',
+						'method'		: 'RetrieveAllMineItems',
+						'note'			: '',
+						'description'	: ''
+					},				   
+					{
+						'verb'			: 'POST',
+						'endpoint'		: '/V1/carts/mine/items',
+						'partition'		: 'CE/Quote/Carts',
+						'method'		: 'CreateMineItems',
+						'note'			: '',
+						'description'	: ''
+					},				 
+					{
+						'verb'			: 'DELETE',
+						'endpoint'		: '/V1/carts/mine/items/:itemId',
+						'partition'		: 'CE/Quote/Carts',
+						'method'		: 'RemoveMineItems',
+						'note'			: '',
+						'description'	: ''
+					},				    
+					{
+						'verb'			: 'PUT',
+						'endpoint'		: '/V1/carts/mine/items/:itemId',
+						'partition'		: 'CE/Quote/Carts',
+						'method'		: 'UpdateMineItems',
+						'note'			: '',
+						'description'	: ''
+					}
+				]
+			},
+			{
+				'name'		: 'quoteCartManagementV1',
+				'methods'	: [				    
+					{
+						'verb'			: 'PUT',
+						'endpoint'		: '/V1/carts/:cartId',
+						'partition'		: 'CE/Quote/Carts',
+						'method'		: 'Update',
+						'note'			: '',
+						'description'	: ''
+					},				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/carts/mine',
+						'partition'		: 'CE/Quote/Carts',
+						'method'		: 'RetrieveAllMine',
+						'note'			: '',
+						'description'	: ''
+					},				   
+					{
+						'verb'			: 'POST',
+						'endpoint'		: '/V1/carts/mine',
+						'partition'		: 'CE/Quote/Carts',
+						'method'		: 'CreateMine',
+						'note'			: '',
+						'description'	: ''
+					},				   
+					{
+						'verb'			: 'POST',
+						'endpoint'		: '/V1/carts/',
+						'partition'		: 'CE/Quote/Carts',
+						'method'		: 'Create',
+						'note'			: '',
+						'description'	: ''
+					},				   
+					{
+						'verb'			: 'POST',
+						'endpoint'		: '/V1/customers/:customerId/carts',
+						'partition'		: 'CE/Quote/Customers',
+						'method'		: 'CreateCarts',
+						'note'			: '',
+						'description'	: ''
+					},				    
+					{
+						'verb'			: 'PUT',
+						'endpoint'		: '/V1/carts/mine/order',
+						'partition'		: 'CE/Quote/Carts',
+						'method'		: 'UpdateMineOrder',
+						'note'			: '',
+						'description'	: ''
+					},				    
+					{
+						'verb'			: 'PUT',
+						'endpoint'		: '/V1/carts/:cartId/order',
+						'partition'		: 'CE/Quote/Carts',
+						'method'		: 'UpdateOrder',
+						'note'			: '',
+						'description'	: ''
+					}
+				]
+			},
+			{
+				'name'		: 'quoteCartRepositoryV1',
+				'methods'	: [				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/carts/:cartId',
+						'partition'		: 'CE/Quote/Carts',
+						'method'		: 'Retrieve',
+						'note'			: '',
+						'description'	: ''
+					},				     
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/carts/search',
+						'partition'		: 'CE/Quote/Carts',
+						'method'		: 'Search',
+						'note'			: '*',
+						'description'	: ''
+					},				     
+					{
+						'verb'			: 'PUT',
+						'endpoint'		: '/V1/carts/mine',
+						'partition'		: 'CE/Quote/Carts',
+						'method'		: 'UpdateMine',
+						'note'			: '*',
+						'description'	: ''
+					}
+				]
+			},
+			{
+				'name'		: 'quoteCartTotalManagementV1',
+				'methods'	: [				    
+					{
+						'verb'			: 'PUT',
+						'endpoint'		: '/V1/carts/mine/collect-totals',
+						'partition'		: 'CE/Quote/Carts',
+						'method'		: 'UpdateMineCollectTotals',
+						'note'			: '',
+						'description'	: ''
+					}
+				]
+			},
+			{
+				'name'		: 'quoteCartTotalRepositoryV1',
+				'methods'	: [				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/carts/:cartId/totals',
+						'partition'		: 'CE/Quote/Carts',
+						'method'		: 'RetrieveTotals',
+						'note'			: '',
+						'description'	: ''
+					},				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/carts/mine/totals',
+						'partition'		: 'CE/Quote/Carts',
+						'method'		: 'RetrieveAllMineTotals',
+						'note'			: '',
+						'description'	: ''
+					}
+				]
+			},
+			{
+				'name'		: 'quoteCouponManagementV1',
+				'methods'	: [				 
+					{
+						'verb'			: 'DELETE',
+						'endpoint'		: '/V1/carts/:cartId/coupons',
+						'partition'		: 'CE/Quote/Carts',
+						'method'		: 'RemoveCoupons',
+						'note'			: '',
+						'description'	: ''
+					},				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/carts/:cartId/coupons',
+						'partition'		: 'CE/Quote/Carts',
+						'method'		: 'RetrieveAllCoupons',
+						'note'			: '',
+						'description'	: ''
+					},				    
+					{
+						'verb'			: 'PUT',
+						'endpoint'		: '/V1/carts/:cartId/coupons/:couponCode',
+						'partition'		: 'CE/Quote/Carts',
+						'method'		: 'UpdateCoupons',
+						'note'			: '',
+						'description'	: ''
+					},				 
+					{
+						'verb'			: 'DELETE',
+						'endpoint'		: '/V1/carts/mine/coupons',
+						'partition'		: 'CE/Quote/Carts',
+						'method'		: 'RemoveAllMineCoupons',
+						'note'			: '',
+						'description'	: ''
+					},				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/carts/mine/coupons',
+						'partition'		: 'CE/Quote/Carts',
+						'method'		: 'RetrieveAllMineCoupons',
+						'note'			: '',
+						'description'	: ''
+					},				    
+					{
+						'verb'			: 'PUT',
+						'endpoint'		: '/V1/carts/mine/coupons/:couponCode',
+						'partition'		: 'CE/Quote/Carts',
+						'method'		: 'UpdateMineCoupons',
+						'note'			: '',
+						'description'	: ''
+					}
+				]
+			},
+			{
+				'name'		: 'quoteGuestBillingAddressManagementV1',
+				'methods'	: [				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/guest-carts/:cartId/billing-address',
+						'partition'		: 'CE/Quote/GuestCarts',
+						'method'		: 'RetrieveAllBillingAddress',
+						'note'			: '',
+						'description'	: ''
+					},				   
+					{
+						'verb'			: 'POST',
+						'endpoint'		: '/V1/guest-carts/:cartId/billing-address',
+						'partition'		: 'CE/Quote/GuestCarts',
+						'method'		: 'CreateBillingAddress',
+						'note'			: '',
+						'description'	: ''
+					}
+				]
+			},
+			{
+				'name'		: 'quoteGuestCartItemRepositoryV1',
+				'methods'	: [				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/guest-carts/:cartId/items',
+						'partition'		: 'CE/Quote/GuestCarts',
+						'method'		: 'RetrieveAllItems',
+						'note'			: '',
+						'description'	: ''
+					},				   
+					{
+						'verb'			: 'POST',
+						'endpoint'		: '/V1/guest-carts/:cartId/items',
+						'partition'		: 'CE/Quote/GuestCarts',
+						'method'		: 'CreateItems',
+						'note'			: '',
+						'description'	: ''
+					},				 
+					{
+						'verb'			: 'DELETE',
+						'endpoint'		: '/V1/guest-carts/:cartId/items/:itemId',
+						'partition'		: 'CE/Quote/GuestCarts',
+						'method'		: 'RemoveItems',
+						'note'			: '',
+						'description'	: ''
+					},				    
+					{
+						'verb'			: 'PUT',
+						'endpoint'		: '/V1/guest-carts/:cartId/items/:itemId',
+						'partition'		: 'CE/Quote/GuestCarts',
+						'method'		: 'UpdateItems',
+						'note'			: '',
+						'description'	: ''
+					}
+				]
+			},
+			{
+				'name'		: 'quoteGuestCartManagementV1',
+				'methods'	: [				     
+					{
+						'verb'			: 'PUT',
+						'endpoint'		: '/V1/guest-carts/:cartId',
+						'partition'		: 'CE/Quote/GuestCarts',
+						'method'		: 'Update',
+						'note'			: '*',
+						'description'	: ''
+					},				   
+					{
+						'verb'			: 'POST',
+						'endpoint'		: ' /V1/guest-carts',
+						'partition'		: 'CE/Quote/GuestCarts',
+						'method'		: 'Create',
+						'note'			: '*',
+						'description'	: ''
+					},				    
+					{
+						'verb'			: 'PUT',
+						'endpoint'		: '/V1/guest-carts/:cartId/order',
+						'partition'		: 'CE/Quote/GuestCarts',
+						'method'		: 'UpdateOrder',
+						'note'			: '',
+						'description'	: ''
+					}
+				]
+			},
+			{
+				'name'		: 'quoteGuestCartRepositoryV1',
+				'methods'	: [				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/guest-carts/:cartId',
+						'partition'		: 'CE/Quote/GuestCarts',
+						'method'		: 'Retrieve',
+						'note'			: '',
+						'description'	: ''
+					}
+				]
+			},
+			{
+				'name'		: 'quoteGuestCartTotalManagementV1',
+				'methods'	: [				   
+					{
+						'verb'			: 'PUT',
+						'endpoint'		: '/V1/guest-carts/:cartId/collect-totals',
+						'partition'		: 'CE/Quote/GuestCarts',
+						'method'		: 'UpdateCollectTotals',
+						'note'			: '',
+						'description'	: ''
+					}
+				]
+			},
+			{
+				'name'		: 'quoteGuestCartTotalRepositoryV1',
+				'methods'	: [				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/guest-carts/:cartId/totals',
+						'partition'		: 'CE/Quote/GuestCarts',
+						'method'		: 'RetrieveAllTotals',
+						'note'			: '',
+						'description'	: ''
+					}
+				]
+			},
+			{
+				'name'		: 'quoteGuestCouponManagementV1',
+				'methods'	: [				 
+					{
+						'verb'			: 'DELETE',
+						'endpoint'		: '/V1/guest-carts/:cartId/coupons',
+						'partition'		: 'CE/Quote/GuestCarts',
+						'method'		: 'RemoveCoupons',
+						'note'			: '',
+						'description'	: ''
+					},				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/guest-carts/:cartId/coupons',
+						'partition'		: 'CE/Quote/GuestCarts',
+						'method'		: 'RetrieveAllCoupons',
+						'note'			: '',
+						'description'	: ''
+					},				    
+					{
+						'verb'			: 'PUT',
+						'endpoint'		: '/V1/guest-carts/:cartId/coupons/:couponCode',
+						'partition'		: 'CE/Quote/GuestCarts',
+						'method'		: 'UpdateCoupons',
+						'note'			: '',
+						'description'	: ''
+					}
+				]
+			},
+			{
+				'name'		: 'quoteGuestPaymentMethodManagementV1',
+				'methods'	: [				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/guest-carts/:cartId/selected-payment-method',
+						'partition'		: 'CE/Quote/GuestCarts',
+						'method'		: 'RetrieveAllSelectedPaymentMethod',
+						'note'			: '',
+						'description'	: ''
+					},				    
+					{
+						'verb'			: 'PUT',
+						'endpoint'		: '/V1/guest-carts/:cartId/selected-payment-method',
+						'partition'		: 'CE/Quote/GuestCarts',
+						'method'		: 'UpdateSelectedPaymentMethod',
+						'note'			: '',
+						'description'	: ''
+					},				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/guest-carts/:cartId/payment-methods',
+						'partition'		: 'CE/Quote/GuestCarts',
+						'method'		: 'RetrieveAllPaymentMethods',
+						'note'			: '',
+						'description'	: ''
+					}
+				]
+			},
+			{
+				'name'		: 'quoteGuestShipmentEstimationV1',
+				'methods'	: [				   
+					{
+						'verb'			: 'POST',
+						'endpoint'		: '/V1/guest-carts/:cartId/estimate-shipping-methods',
+						'partition'		: 'CE/Quote/GuestCarts',
+						'method'		: 'CreateEstimateShippingMethods',
+						'note'			: '',
+						'description'	: ''
+					}
+				]
+			},
+			{
+				'name'		: 'quoteGuestShippingMethodManagementV1',
+				'methods'	: [				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/guest-carts/:cartId/shipping-methods',
+						'partition'		: 'CE/Quote/GuestCarts',
+						'method'		: 'RetrieveAllShippingMethods',
+						'note'			: '',
+						'description'	: ''
+					}
+				]
+			},
+			{
+				'name'		: 'quotePaymentMethodManagementV1',
+				'methods'	: [				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/carts/:cartId/selected-payment-method',
+						'partition'		: 'CE/Quote/Carts',
+						'method'		: 'RetrieveAllSelectedPaymentMethod',
+						'note'			: '',
+						'description'	: ''
+					},				    
+					{
+						'verb'			: 'PUT',
+						'endpoint'		: '/V1/carts/:cartId/selected-payment-method',
+						'partition'		: 'CE/Quote/Carts',
+						'method'		: 'UpdateSelectedPaymentMethod',
+						'note'			: '',
+						'description'	: ''
+					},				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/carts/:cartId/payment-methods',
+						'partition'		: 'CE/Quote/Carts',
+						'method'		: 'RetrieveAllPaymentMethods',
+						'note'			: '',
+						'description'	: ''
+					},				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/carts/mine/selected-payment-method',
+						'partition'		: 'CE/Quote/Carts',
+						'method'		: 'RetrieveAllMineSelectedPaymentMethod',
+						'note'			: '',
+						'description'	: ''
+					},				    
+					{
+						'verb'			: 'PUT',
+						'endpoint'		: '/V1/carts/mine/selected-payment-method',
+						'partition'		: 'CE/Quote/Carts',
+						'method'		: 'UpdateMineSelectedPaymentMethod',
+						'note'			: '',
+						'description'	: ''
+					},				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/carts/mine/payment-methods',
+						'partition'		: 'CE/Quote/Carts',
+						'method'		: 'RetrieveAllMinePaymentMethods',
+						'note'			: '',
+						'description'	: ''
+					}
+				]
+			},
+			{
+				'name'		: 'quoteShipmentEstimationV1',
+				'methods'	: [				   
+					{
+						'verb'			: 'POST',
+						'endpoint'		: '/V1/carts/:cartId/estimate-shipping-methods',
+						'partition'		: 'CE/Quote/Carts',
+						'method'		: 'CreateEstimateShippingMethods',
+						'note'			: '',
+						'description'	: ''
+					},				   
+					{
+						'verb'			: 'POST',
+						'endpoint'		: '/V1/carts/mine/estimate-shipping-methods',
+						'partition'		: 'CE/Quote/Carts',
+						'method'		: 'CreateMineEstimateShippingMethods',
+						'note'			: '',
+						'description'	: ''
+					}
+				]
+			},
+			{
+				'name'		: 'quoteShippingMethodManagementV1',
+				'methods'	: [				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/carts/:cartId/shipping-methods',
+						'partition'		: 'CE/Quote/Carts',
+						'method'		: 'RetrieveAllShippingMethods',
+						'note'			: '',
+						'description'	: ''
+					},				   
+					{
+						'verb'			: 'POST',
+						'endpoint'		: '/V1/carts/:cartId/estimate-shipping-methods-by-address-id',
+						'partition'		: 'CE/Quote/Carts',
+						'method'		: 'CreateEstimateShippingMethodsByAddressId',
+						'note'			: '',
+						'description'	: ''
+					},				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/carts/mine/shipping-methods',
+						'partition'		: 'CE/Quote/Carts',
+						'method'		: 'RetrieveAllMineShippingMethods',
+						'note'			: '',
+						'description'	: ''
+					},				   
+					{
+						'verb'			: 'POST',
+						'endpoint'		: '/V1/carts/mine/estimate-shipping-methods-by-address-id',
+						'partition'		: 'CE/Quote/Carts',
+						'method'		: 'CreateMineEstimateShippingMethodsByAddressId',
+						'note'			: '',
+						'description'	: ''
+					}
+					
+				]
+			}
+		]		
+	}		
+}

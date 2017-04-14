@@ -1,0 +1,15 @@
+<?php
+	/*
+		FORMAT
+		======
+		[
+		  {
+			"id": 0,
+			"code": "string",
+			"name": "string",
+			"website_id": 0,
+			"store_group_id": 0,
+			"extension_attributes": {}
+		  }
+		]
+	*/

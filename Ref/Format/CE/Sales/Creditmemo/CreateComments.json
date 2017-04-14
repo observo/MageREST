@@ -1,0 +1,29 @@
+<?php
+	/*
+		FORMAT
+		======
+		{
+		  "comment": "string",
+		  "created_at": "string",
+		  "entity_id": 0,
+		  "is_customer_notified": 0,
+		  "is_visible_on_front": 0,
+		  "parent_id": 0,
+		  "extension_attributes": {}
+		}
+		PARAMETERS
+		==========
+		id
+		$body=
+			{
+			  "entity": {
+				"comment": "string",
+				"created_at": "string",
+				"entity_id": 0,
+				"is_customer_notified": 0,
+				"is_visible_on_front": 0,
+				"parent_id": 0,
+				"extension_attributes": {}
+			  }
+			}
+	*/

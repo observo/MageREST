@@ -1,0 +1,21 @@
+<?php
+	/*
+		FORMAT
+		======
+		[
+		  {
+			"sku": "string",
+			"link_type": "string",
+			"linked_product_sku": "string",
+			"linked_product_type": "string",
+			"position": 0,
+			"extension_attributes": {
+			  "qty": 0
+			}
+		  }
+		]
+		PARAMETERS
+		==========
+		sku
+		type
+	*/

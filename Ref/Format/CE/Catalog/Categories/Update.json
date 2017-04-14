@@ -1,0 +1,57 @@
+<?php
+	/*
+		FORMAT
+		======
+		{
+		  "id": 0,
+		  "parent_id": 0,
+		  "name": "string",
+		  "is_active": true,
+		  "position": 0,
+		  "level": 0,
+		  "children": "string",
+		  "created_at": "string",
+		  "updated_at": "string",
+		  "path": "string",
+		  "available_sort_by": [
+			"string"
+		  ],
+		  "include_in_menu": true,
+		  "extension_attributes": {},
+		  "custom_attributes": [
+			{
+			  "attribute_code": "string",
+			  "value": "string"
+			}
+		  ]
+		}
+		PARAMETERS
+		==========
+		id
+		$body=
+			{
+			  "category": {
+				"id": 0,
+				"parent_id": 0,
+				"name": "string",
+				"is_active": true,
+				"position": 0,
+				"level": 0,
+				"children": "string",
+				"created_at": "string",
+				"updated_at": "string",
+				"path": "string",
+				"available_sort_by": [
+				  "string"
+				],
+				"include_in_menu": true,
+				"extension_attributes": {},
+				"custom_attributes": [
+				  {
+					"attribute_code": "string",
+					"value": "string"
+				  }
+				]
+			  }
+			}
+	*/

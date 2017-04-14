@@ -1,0 +1,131 @@
+<?php
+	/*
+		FORMAT
+		======
+		{
+		  "grand_total": 0,
+		  "base_grand_total": 0,
+		  "subtotal": 0,
+		  "base_subtotal": 0,
+		  "discount_amount": 0,
+		  "base_discount_amount": 0,
+		  "subtotal_with_discount": 0,
+		  "base_subtotal_with_discount": 0,
+		  "shipping_amount": 0,
+		  "base_shipping_amount": 0,
+		  "shipping_discount_amount": 0,
+		  "base_shipping_discount_amount": 0,
+		  "tax_amount": 0,
+		  "base_tax_amount": 0,
+		  "weee_tax_applied_amount": 0,
+		  "shipping_tax_amount": 0,
+		  "base_shipping_tax_amount": 0,
+		  "subtotal_incl_tax": 0,
+		  "base_subtotal_incl_tax": 0,
+		  "shipping_incl_tax": 0,
+		  "base_shipping_incl_tax": 0,
+		  "base_currency_code": "string",
+		  "quote_currency_code": "string",
+		  "coupon_code": "string",
+		  "items_qty": 0,
+		  "items": [
+			{
+			  "item_id": 0,
+			  "price": 0,
+			  "base_price": 0,
+			  "qty": 0,
+			  "row_total": 0,
+			  "base_row_total": 0,
+			  "row_total_with_discount": 0,
+			  "tax_amount": 0,
+			  "base_tax_amount": 0,
+			  "tax_percent": 0,
+			  "discount_amount": 0,
+			  "base_discount_amount": 0,
+			  "discount_percent": 0,
+			  "price_incl_tax": 0,
+			  "base_price_incl_tax": 0,
+			  "row_total_incl_tax": 0,
+			  "base_row_total_incl_tax": 0,
+			  "options": "string",
+			  "weee_tax_applied_amount": 0,
+			  "weee_tax_applied": "string",
+			  "extension_attributes": {},
+			  "name": "string"
+			}
+		  ],
+		  "total_segments": [
+			{
+			  "code": "string",
+			  "title": "string",
+			  "value": 0,
+			  "area": "string",
+			  "extension_attributes": {
+				"tax_grandtotal_details": [
+				  {
+					"amount": 0,
+					"rates": [
+					  {
+						"percent": "string",
+						"title": "string"
+					  }
+					],
+					"group_id": 0
+				  }
+				]
+			  }
+			}
+		  ],
+		  "extension_attributes": {}
+		}
+		PARAMETERS
+		==========
+		cartId
+		$body=
+			{
+			  "addressInformation": {
+				"address": {
+				  "id": 0,
+				  "region": "string",
+				  "region_id": 0,
+				  "region_code": "string",
+				  "country_id": "string",
+				  "street": [
+					"string"
+				  ],
+				  "company": "string",
+				  "telephone": "string",
+				  "fax": "string",
+				  "postcode": "string",
+				  "city": "string",
+				  "firstname": "string",
+				  "lastname": "string",
+				  "middlename": "string",
+				  "prefix": "string",
+				  "suffix": "string",
+				  "vat_id": "string",
+				  "customer_id": 0,
+				  "email": "string",
+				  "same_as_billing": 0,
+				  "customer_address_id": 0,
+				  "save_in_address_book": 0,
+				  "extension_attributes": {},
+				  "custom_attributes": [
+					{
+					  "attribute_code": "string",
+					  "value": "string"
+					}
+				  ]
+				},
+				"shipping_method_code": "string",
+				"shipping_carrier_code": "string",
+				"extension_attributes": {},
+				"custom_attributes": [
+				  {
+					"attribute_code": "string",
+					"value": "string"
+				  }
+				]
+			  }
+			}
+	*/

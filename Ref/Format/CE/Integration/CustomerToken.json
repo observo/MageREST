@@ -1,0 +1,13 @@
+<?php
+	/*
+		FORMAT
+		======
+		
+		PARAMETERS
+		==========
+		$body=
+			{
+			  "username": "string",
+			  "password": "string"
+			}
+	*/

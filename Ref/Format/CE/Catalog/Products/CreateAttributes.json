@@ -1,0 +1,148 @@
+<?php
+	/*
+		FORMAT
+		======
+		{
+		  "is_wysiwyg_enabled": true,
+		  "is_html_allowed_on_front": true,
+		  "used_for_sort_by": true,
+		  "is_filterable": true,
+		  "is_filterable_in_search": true,
+		  "is_used_in_grid": true,
+		  "is_visible_in_grid": true,
+		  "is_filterable_in_grid": true,
+		  "position": 0,
+		  "apply_to": [
+			"string"
+		  ],
+		  "is_searchable": "string",
+		  "is_visible_in_advanced_search": "string",
+		  "is_comparable": "string",
+		  "is_used_for_promo_rules": "string",
+		  "is_visible_on_front": "string",
+		  "used_in_product_listing": "string",
+		  "is_visible": true,
+		  "scope": "string",
+		  "extension_attributes": {},
+		  "attribute_id": 0,
+		  "attribute_code": "string",
+		  "frontend_input": "string",
+		  "entity_type_id": "string",
+		  "is_required": true,
+		  "options": [
+			{
+			  "label": "string",
+			  "value": "string",
+			  "sort_order": 0,
+			  "is_default": true,
+			  "store_labels": [
+				{
+				  "store_id": 0,
+				  "label": "string"
+				}
+			  ]
+			}
+		  ],
+		  "is_user_defined": true,
+		  "default_frontend_label": "string",
+		  "frontend_labels": [
+			{
+			  "store_id": 0,
+			  "label": "string"
+			}
+		  ],
+		  "note": "string",
+		  "backend_type": "string",
+		  "backend_model": "string",
+		  "source_model": "string",
+		  "default_value": "string",
+		  "is_unique": "string",
+		  "frontend_class": "string",
+		  "validation_rules": [
+			{
+			  "key": "string",
+			  "value": "string"
+			}
+		  ],
+		  "custom_attributes": [
+			{
+			  "attribute_code": "string",
+			  "value": "string"
+			}
+		  ]
+		}
+		PARAMETERS
+		==========
+		$body=
+			{
+			  "attribute": {
+				"is_wysiwyg_enabled": true,
+				"is_html_allowed_on_front": true,
+				"used_for_sort_by": true,
+				"is_filterable": true,
+				"is_filterable_in_search": true,
+				"is_used_in_grid": true,
+				"is_visible_in_grid": true,
+				"is_filterable_in_grid": true,
+				"position": 0,
+				"apply_to": [
+				  "string"
+				],
+				"is_searchable": "string",
+				"is_visible_in_advanced_search": "string",
+				"is_comparable": "string",
+				"is_used_for_promo_rules": "string",
+				"is_visible_on_front": "string",
+				"used_in_product_listing": "string",
+				"is_visible": true,
+				"scope": "string",
+				"extension_attributes": {},
+				"attribute_id": 0,
+				"attribute_code": "string",
+				"frontend_input": "string",
+				"entity_type_id": "string",
+				"is_required": true,
+				"options": [
+				  {
+					"label": "string",
+					"value": "string",
+					"sort_order": 0,
+					"is_default": true,
+					"store_labels": [
+					  {
+						"store_id": 0,
+						"label": "string"
+					  }
+					]
+				  }
+				],
+				"is_user_defined": true,
+				"default_frontend_label": "string",
+				"frontend_labels": [
+				  {
+					"store_id": 0,
+					"label": "string"
+				  }
+				],
+				"note": "string",
+				"backend_type": "string",
+				"backend_model": "string",
+				"source_model": "string",
+				"default_value": "string",
+				"is_unique": "string",
+				"frontend_class": "string",
+				"validation_rules": [
+				  {
+					"key": "string",
+					"value": "string"
+				  }
+				],
+				"custom_attributes": [
+				  {
+					"attribute_code": "string",
+					"value": "string"
+				  }
+				]
+			  }
+			}
+	*/

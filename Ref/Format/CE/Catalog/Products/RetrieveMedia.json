@@ -1,0 +1,35 @@
+<?php
+	/*
+		FORMAT
+		======
+		{
+		  "id": 0,
+		  "media_type": "string",
+		  "label": "string",
+		  "position": 0,
+		  "disabled": true,
+		  "types": [
+			"string"
+		  ],
+		  "file": "string",
+		  "content": {
+			"base64_encoded_data": "string",
+			"type": "string",
+			"name": "string"
+		  },
+		  "extension_attributes": {
+			"video_content": {
+			  "media_type": "string",
+			  "video_provider": "string",
+			  "video_url": "string",
+			  "video_title": "string",
+			  "video_description": "string",
+			  "video_metadata": "string"
+			}
+		  }
+		}
+		PARAMETERS
+		==========
+		sku
+		entryId
+	*/

@@ -1,0 +1,354 @@
+{
+	'module'	: {
+		'name'   : 'Customer',
+		'service'	: [
+			{
+				'name'		: 'customerAccountManagementV1',
+				'methods'	: [				   
+					{
+						'verb'			: 'POST',
+						'endpoint'		: '/V1/customers',
+						'partition'		: 'CE/Customer/Customers',
+						'method'		: 'Create',
+						'note'			: '',
+						'description'	: ''
+					},				    
+					{
+						'verb'			: 'PUT',
+						'endpoint'		: '/V1/customers/me/activate',
+						'partition'		: 'CE/Customer/Customers',
+						'method'		: 'ActivateMe',
+						'note'			: '',
+						'description'	: ''
+					},				    
+					{
+						'verb'			: 'PUT',
+						'endpoint'		: '/V1/customers/:email/activate',
+						'partition'		: 'CE/Customer/Customers',
+						'method'		: 'Activate',
+						'note'			: '',
+						'description'	: ''
+					},				    
+					{
+						'verb'			: 'PUT',
+						'endpoint'		: '/V1/customers/me/password',
+						'partition'		: 'CE/Customer/Customers',
+						'method'		: 'UpdateMinePassword',
+						'note'			: '',
+						'description'	: ''
+					},				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/customers/:customerId/password/resetLinkToken/:resetPasswordLinkToken',
+						'partition'		: 'CE/Customer/Customers',
+						'method'		: 'RetrievePasswordResetLinkToken',
+						'note'			: '',
+						'description'	: ''
+					},				    
+					{
+						'verb'			: 'PUT',
+						'endpoint'		: '/V1/customers/password',
+						'partition'		: 'CE/Customer/Customers',
+						'method'		: 'UpdatePassword',
+						'note'			: '',
+						'description'	: ''
+					},				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/customers/:customerId/confirm',
+						'partition'		: 'CE/Customer/Customers',
+						'method'		: 'RetrieveAllConfirm',
+						'note'			: '',
+						'description'	: ''
+					},				   
+					{
+						'verb'			: 'POST',
+						'endpoint'		: '/V1/customers/confirm',
+						'partition'		: 'CE/Customer/Customers',
+						'method'		: 'Confirm',
+						'note'			: '',
+						'description'	: ''
+					},				    
+					{
+						'verb'			: 'PUT',
+						'endpoint'		: '/V1/customers/validate',
+						'partition'		: 'CE/Customer/Customers',
+						'method'		: 'Validate',
+						'note'			: '',
+						'description'	: ''
+					},				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/customers/:customerId/permissions/readonly',
+						'partition'		: 'CE/Customer/Customers',
+						'method'		: 'RetrieveAllPermissionsReadonly',
+						'note'			: '',
+						'description'	: ''
+					},				   
+					{
+						'verb'			: 'POST',
+						'endpoint'		: '/V1/customers/isEmailAvailable',
+						'partition'		: 'CE/Customer/Customers',
+						'method'		: 'CreateIsEmailAvailable',
+						'note'			: '',
+						'description'	: ''
+					},				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/customers/me/billingAddress',
+						'partition'		: 'CE/Customer/Customers',
+						'method'		: 'RetrieveAllMineBillingAddress',
+						'note'			: '',
+						'description'	: ''
+					},				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/customers/:customerId/billingAddress',
+						'partition'		: 'CE/Customer/Customers',
+						'method'		: 'RetrieveAllBillingAddress',
+						'note'			: '',
+						'description'	: ''
+					},				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/customers/me/shippingAddress',
+						'partition'		: 'CE/Customer/Customers',
+						'method'		: 'RetrieveAllMineShippingAddress',
+						'note'			: '',
+						'description'	: ''
+					},				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/customers/:customerId/shippingAddress',
+						'partition'		: 'CE/Customer/Customers',
+						'method'		: 'RetrieveAllShippingAddress',
+						'note'			: '',
+						'description'	: ''
+					}
+				]
+			},
+			{
+				'name'		: 'customerAddressMetadataV1',
+				'methods'	: [				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/attributeMetadata/customerAddress/attribute/:attributeCode',
+						'partition'		: 'CE/Customer/AttributeMetadata',
+						'method'		: 'RetrieveCustomerAddressAttribute',
+						'note'			: '',
+						'description'	: ''
+					},				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/attributeMetadata/customerAddress/form/:formCode',
+						'partition'		: 'CE/Customer/AttributeMetadata',
+						'method'		: 'RetrieveCustomerAddressForm',
+						'note'			: '',
+						'description'	: ''
+					},				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/attributeMetadata/customerAddress',
+						'partition'		: 'CE/Customer/AttributeMetadata',
+						'method'		: 'RetrieveAllCustomerAddress',
+						'note'			: '',
+						'description'	: ''
+					},				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/attributeMetadata/customerAddress/custom',
+						'partition'		: 'CE/Customer/AttributeMetadata',
+						'method'		: 'RetrieveAllCustomerAddressCustom',
+						'note'			: '',
+						'description'	: ''
+					}
+				]
+			},
+			{
+				'name'		: 'customerAddressRepositoryV1',
+				'methods'	: [				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/customers/addresses/:addressId',
+						'partition'		: 'CE/Customer/Customers',
+						'method'		: 'RetrieveAddresses',
+						'note'			: '',
+						'description'	: ''
+					},				 
+					{
+						'verb'			: 'DELETE',
+						'endpoint'		: '/V1/addresses/:addressId',
+						'partition'		: 'CE/Customer/Addresses',
+						'method'		: 'RemoveAddress',
+						'note'			: '',
+						'description'	: ''
+					}
+				]
+			},
+			{
+				'name'		: 'customerCustomerMetadataV1',
+				'methods'	: [				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/attributeMetadata/customer/attribute/:attributeCode',
+						'partition'		: 'CE/Customer/AttributeMetadata',
+						'method'		: 'RetrieveCustomerAttributeByAttribute',
+						'note'			: '',
+						'description'	: ''
+					},				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/attributeMetadata/customer/form/:formCode',
+						'partition'		: 'CE/Customer/AttributeMetadata',
+						'method'		: 'RetrieveCustomerForm',
+						'note'			: '',
+						'description'	: ''
+					},				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/attributeMetadata/customer',
+						'partition'		: 'CE/Customer/AttributeMetadata',
+						'method'		: 'RetrieveAllCustomer',
+						'note'			: '',
+						'description'	: ''
+					},				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/attributeMetadata/customer/custom',
+						'partition'		: 'CE/Customer/AttributeMetadata',
+						'method'		: 'RetrieveAllCustomerCustom',
+						'note'			: '',
+						'description'	: ''
+					}
+				]
+			},
+			{
+				'name'		: 'customerCustomerRepositoryV1',
+				'methods'	: [				 
+					{
+						'verb'			: 'DELETE',
+						'endpoint'		: '/V1/customers/:customerId',
+						'partition'		: 'CE/Customer/Customers',
+						'method'		: 'RemoveCustomer',
+						'note'			: '',
+						'description'	: ''
+					},				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/customers/:customerId',
+						'partition'		: 'CE/Customer/Customers',
+						'method'		: 'Retrieve',
+						'note'			: '',
+						'description'	: ''
+					},				    
+					{
+						'verb'			: 'PUT',
+						'endpoint'		: '/V1/customers/:id',
+						'partition'		: 'CE/Customer/Customers',
+						'method'		: 'Update',
+						'note'			: '',
+						'description'	: ''
+					},				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/customers/me',
+						'partition'		: 'CE/Customer/Customers',
+						'method'		: 'RetrieveAllMine',
+						'note'			: '',
+						'description'	: ''
+					},				    
+					{
+						'verb'			: 'PUT',
+						'endpoint'		: '/V1/customers/me',
+						'partition'		: 'CE/Customer/Customers',
+						'method'		: 'UpdateMe',
+						'note'			: '',
+						'description'	: ''
+					},				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/customers/search',
+						'partition'		: 'CE/Customer/Customers',
+						'method'		: 'Search',
+						'note'			: '',
+						'description'	: ''
+					}
+				]
+			},
+			{
+				'name'		: 'customerGroupManagementV1',
+				'methods'	: [				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/customerGroups/default/:storeId',
+						'partition'		: 'CE/Customer/CustomerGroups',
+						'method'		: 'RetrieveDefaultByStore',
+						'note'			: '',
+						'description'	: ''
+					},				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/customerGroups/default',
+						'partition'		: 'CE/Customer/CustomerGroups',
+						'method'		: 'RetrieveAllDefault',
+						'note'			: '',
+						'description'	: ''
+					},				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/customerGroups/:id/permissions',
+						'partition'		: 'CE/Customer/CustomerGroups',
+						'method'		: 'RetrieveAllPermissions',
+						'note'			: '',
+						'description'	: ''
+					}
+				]
+			},
+			{
+				'name'		: 'customerGroupRepositoryV1',
+				'methods'	: [				 
+					{
+						'verb'			: 'DELETE',
+						'endpoint'		: '/V1/customerGroups/:id',
+						'partition'		: 'CE/Customer/CustomerGroups',
+						'method'		: 'Remove',
+						'note'			: '',
+						'description'	: ''
+					},				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/customerGroups/:id',
+						'partition'		: 'CE/Customer/CustomerGroups',
+						'method'		: 'Retrieve',
+						'note'			: '',
+						'description'	: ''
+					},				    
+					{
+						'verb'			: 'PUT',
+						'endpoint'		: '/V1/customerGroups/:id',
+						'partition'		: 'CE/Customer/CustomerGroups',
+						'method'		: 'Update',
+						'note'			: '',
+						'description'	: ''
+					},				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/customerGroups/search',
+						'partition'		: 'CE/Customer/CustomerGroups',
+						'method'		: 'Search',
+						'note'			: '',
+						'description'	: ''
+					},				   
+					{
+						'verb'			: 'POST',
+						'endpoint'		: '/V1/customerGroups',
+						'partition'		: 'CE/Customer/CustomerGroups',
+						'method'		: 'Create',
+						'note'			: '',
+						'description'	: ''
+					}
+				]
+			}
+		]	
+	}
+}

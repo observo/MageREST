@@ -1,0 +1,676 @@
+{
+	'module'	: {
+		'name'   : 'Catalog',
+		'service'	: [
+			{
+				'name'		: 'catalogAttributeSetManagementV1',
+				'methods'	: [				   
+					{
+						'verb'			: 'POST',
+						'endpoint'		: '/V1/products/attribute-sets',
+						'partition'		: 'CE/Catalog/Products',
+						'method'		: 'CreateAttributeSets',
+						'note'			: '',
+						'description'	: ''
+					}
+				]
+			},
+			{
+				'name'		: 'catalogAttributeSetRepositoryV1',
+				'methods'	: [				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/products/attribute-sets/sets/list',
+						'partition'		: 'CE/Catalog/Products',
+						'method'		: 'RetriveAllAttributeSetsSets',
+						'note'			: '',
+						'description'	: ''
+					},				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/products/attribute-sets/:attributeSetId',
+						'partition'		: 'CE/Catalog/Products',
+						'method'		: 'RetriveAttributeSets',
+						'note'			: '',
+						'description'	: ''
+					},				 
+					{
+						'verb'			: 'DELETE',
+						'endpoint'		: '/V1/products/attribute-sets/:attributeSetId',
+						'partition'		: 'CE/Catalog/Products',
+						'method'		: 'RemoveAttributeSets',
+						'note'			: '',
+						'description'	: ''
+					},				    
+					{
+						'verb'			: 'PUT',
+						'endpoint'		: '/V1/products/attribute-sets/:attributeSetId',
+						'partition'		: 'CE/Catalog/Products',
+						'method'		: 'UpdateAttributeSets',
+						'note'			: '',
+						'description'	: ''
+					}
+				]
+			},
+			{
+				'name'		: 'catalogCategoryAttributeOptionManagementV1',
+				'methods'	: [				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/categories/attributes/:attributeCode/options',
+						'partition'		: 'CE/Catalog/Categories',
+						'method'		: 'RetrieveAllAttributesOptions',
+						'note'			: '',
+						'description'	: ''
+					}
+				]
+			},
+			{
+				'name'		: 'catalogCategoryAttributeRepositoryV1',
+				'methods'	: [				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/categories/attributes/:attributeCode',
+						'partition'		: 'CE/Catalog/Categories',
+						'method'		: 'RetriveAttributes',
+						'note'			: '',
+						'description'	: ''
+					},				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/categories/attributes',
+						'partition'		: 'CE/Catalog/Categories',
+						'method'		: 'RetriveAllAttributes',
+						'note'			: '',
+						'description'	: ''
+					}
+				]
+			},
+			{
+				'name'		: 'catalogCategoryLinkManagementV1',
+				'methods'	: [				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/categories/:categoryId/products',
+						'partition'		: 'CE/Catalog/Categories',
+						'method'		: 'RetrieveAllProducts',
+						'note'			: '',
+						'description'	: ''
+					}
+				]
+			},
+			{
+				'name'		: 'catalogCategoryLinkRepositoryV1',
+				'methods'	: [				   
+					{
+						'verb'			: 'POST',
+						'endpoint'		: '/V1/categories/:categoryId/products',
+						'partition'		: 'CE/Catalog/Categories',
+						'method'		: 'CreateProducts',
+						'note'			: '',
+						'description'	: ''
+					},				    
+					{
+						'verb'			: 'PUT',
+						'endpoint'		: '/V1/categories/:categoryId/products',
+						'partition'		: 'CE/Catalog/Categories',
+						'method'		: 'UpdateProducts',
+						'note'			: '',
+						'description'	: ''
+					},				 
+					{
+						'verb'			: 'DELETE',
+						'endpoint'		: '/V1/categories/:categoryId/products/:sku',
+						'partition'		: 'CE/Catalog/Categories',
+						'method'		: 'RemoveProducts',
+						'note'			: '',
+						'description'	: ''
+					}
+				]
+			},
+			{
+				'name'		: 'catalogCategoryManagementV1',
+				'methods'	: [				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/categories',
+						'partition'		: 'CE/Catalog/Categories',
+						'method'		: 'RetrieveAll',
+						'note'			: '',
+						'description'	: ''
+					},				    
+					{
+						'verb'			: 'PUT',
+						'endpoint'		: '/V1/categories/:categoryId/move',
+						'partition'		: 'CE/Catalog/Categories',
+						'method'		: 'Move',
+						'note'			: '',
+						'description'	: ''
+					}
+				]
+			},
+			{
+				'name'		: 'catalogCategoryRepositoryV1',
+				'methods'	: [				 
+					{
+						'verb'			: 'DELETE',
+						'endpoint'		: '/V1/categories/:categoryId',
+						'partition'		: 'CE/Catalog/Categories',
+						'method'		: 'Remove',
+						'note'			: '',
+						'description'	: ''
+					},				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/categories/:categoryId',
+						'partition'		: 'CE/Catalog/Categories',
+						'method'		: 'Retrieve',
+						'note'			: '',
+						'description'	: ''
+					},				   
+					{
+						'verb'			: 'POST',
+						'endpoint'		: '/V1/categories',
+						'partition'		: 'CE/Catalog/Categories',
+						'method'		: 'Create',
+						'note'			: '',
+						'description'	: ''
+					},				    
+					{
+						'verb'			: 'PUT',
+						'endpoint'		: '/V1/categories/:id',
+						'partition'		: 'CE/Catalog/Categories',
+						'method'		: 'Update',
+						'note'			: '',
+						'description'	: ''
+					}
+				]
+			},
+			{
+				'name'		: 'catalogInventoryStockRegistryV1',
+				'methods'	: [				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/stockItems/:productSku',
+						'partition'		: 'CE/Catalog/StockItems',
+						'method'		: 'Retrieve',
+						'note'			: '',
+						'description'	: ''
+					},				    
+					{
+						'verb'			: 'PUT',
+						'endpoint'		: '/V1/products/:productSku/stockItems/:itemId',
+						'partition'		: 'CE/Catalog/Products',
+						'method'		: 'RetrieveStockItems',
+						'note'			: '',
+						'description'	: ''
+					},				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/stockItems/lowStock/',
+						'partition'		: 'CE/Catalog/StockItems',
+						'method'		: 'RetrieveAllLowStock',
+						'note'			: '',
+						'description'	: ''
+					},				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/stockStatuses/:productSku',
+						'partition'		: 'CE/Catalog/StockStatuses',
+						'method'		: 'Retrieve',
+						'note'			: '',
+						'description'	: ''
+					}
+				]
+			},
+			{
+				'name'		: 'catalogProductAttributeGroupRepositoryV1',
+				'methods'	: [				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/products/attribute-sets/groups/list',
+						'partition'		: 'CE/Catalog/Products',
+						'method'		: 'RetrieveAllAttributeSetsGroups',
+						'note'			: '',
+						'description'	: ''
+					},				   
+					{
+						'verb'			: 'POST',
+						'endpoint'		: '/V1/products/attribute-sets/groups',
+						'partition'		: 'CE/Catalog/Products',
+						'method'		: 'CreateAttributeSetsGroups',
+						'note'			: '',
+						'description'	: ''
+					},				    
+					{
+						'verb'			: 'PUT',
+						'endpoint'		: '/V1/products/attribute-sets/:attributeSetId/groups',
+						'partition'		: 'CE/Catalog/Products',
+						'method'		: 'UpdateAttributeSetsGroups',
+						'note'			: '',
+						'description'	: ''
+					},				 
+					{
+						'verb'			: 'DELETE',
+						'endpoint'		: '/V1/products/attribute-sets/groups/:groupId',
+						'partition'		: 'CE/Catalog/Products',
+						'method'		: 'RemoveAttributeSetsGroups',
+						'note'			: '',
+						'description'	: ''
+					},
+				]
+			},
+			{
+				'name'		: 'catalogProductAttributeManagementV1',
+				'methods'	: [				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/products/attribute-sets/:attributeSetId/attributes',
+						'partition'		: 'CE/Catalog/Products',
+						'method'		: 'RetriveAllAttributeSetsAttributes',
+						'note'			: '',
+						'description'	: ''
+					},				   
+					{
+						'verb'			: 'POST',
+						'endpoint'		: '/V1/products/attribute-sets/attributes',
+						'partition'		: 'CE/Catalog/Products',
+						'method'		: 'CreateAttributeSetsAttributes',
+						'note'			: '',
+						'description'	: ''
+					},				 
+					{
+						'verb'			: 'DELETE',
+						'endpoint'		: '/V1/products/attribute-sets/:attributeSetId/attributes/:attributeCode',
+						'partition'		: 'CE/Catalog/Products',
+						'method'		: 'RemoveAttributeSetsAttributes',
+						'note'			: '',
+						'description'	: ''
+					}
+				]
+			},
+			{
+				'name'		: 'catalogProductAttributeMediaGalleryManagementV1',
+				'methods'	: [				 
+					{
+						'verb'			: 'DELETE',
+						'endpoint'		: '/V1/products/:sku/media/:entryId',
+						'partition'		: 'CE/Catalog/Products',
+						'method'		: 'RemoveMedia',
+						'note'			: '',
+						'description'	: ''
+					},				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/products/:sku/media/:entryId',
+						'partition'		: 'CE/Catalog/Products',
+						'method'		: 'RetrieveMedia',
+						'note'			: '',
+						'description'	: ''
+					},				    
+					{
+						'verb'			: 'PUT',
+						'endpoint'		: '/V1/products/:sku/media/:entryId',
+						'partition'		: 'CE/Catalog/Products',
+						'method'		: 'UpdateMedia',
+						'note'			: '',
+						'description'	: ''
+					},				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/products/:sku/media',
+						'partition'		: 'CE/Catalog/Products',
+						'method'		: 'RetrieveAllMedia',
+						'note'			: '',
+						'description'	: ''
+					},				  
+					{
+						'verb'			: 'POST',
+						'endpoint'		: ' /V1/products/:sku/media',
+						'partition'		: 'CE/Catalog/Products',
+						'method'		: 'CreateMedia',
+						'note'			: '',
+						'description'	: ''
+					},
+				]
+			},
+			{
+				'name'		: 'catalogProductAttributeOptionManagementV1',
+				'methods'	: [				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/products/attributes/:attributeCode/options',
+						'partition'		: 'CE/Catalog/Products',
+						'method'		: 'RetrieveAllAttributesOptions',
+						'note'			: '',
+						'description'	: ''
+					},				   
+					{
+						'verb'			: 'POST',
+						'endpoint'		: '/V1/products/attributes/:attributeCode/options',
+						'partition'		: 'CE/Catalog/Products',
+						'method'		: 'CreateAttributesOptions',
+						'note'			: '',
+						'description'	: ''
+					},				 
+					{
+						'verb'			: 'DELETE',
+						'endpoint'		: '/V1/products/attributes/:attributeCode/options/:optionId',
+						'partition'		: 'CE/Catalog/Products',
+						'method'		: 'RemoveAttributesOptions',
+						'note'			: '',
+						'description'	: ''
+					}
+				]
+			},
+			{
+				'name'		: 'catalogProductAttributeRepositoryV1',
+				'methods'	: [				 
+					{
+						'verb'			: 'DELETE',
+						'endpoint'		: '/V1/products/attributes/:attributeCode',
+						'partition'		: 'CE/Catalog/Products',
+						'method'		: 'RemoveAttributes',
+						'note'			: '',
+						'description'	: ''
+					},				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/products/attributes/:attributeCode',
+						'partition'		: 'CE/Catalog/Products',
+						'method'		: 'RetrieveAttributes',
+						'note'			: '',
+						'description'	: ''
+					},				    
+					{
+						'verb'			: 'PUT',
+						'endpoint'		: '/V1/products/attributes/:attributeCode',
+						'partition'		: 'CE/Catalog/Products',
+						'method'		: 'UpdateAttributes',
+						'note'			: '',
+						'description'	: ''
+					},				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/products/attributes',
+						'partition'		: 'CE/Catalog/Products',
+						'method'		: 'RetrieveAllAttributes',
+						'note'			: '',
+						'description'	: ''
+					},				   
+					{
+						'verb'			: 'POST',
+						'endpoint'		: '/V1/products/attributes',
+						'partition'		: 'CE/Catalog/Products',
+						'method'		: 'CreateAttributes',
+						'note'			: '',
+						'description'	: ''
+					}
+				]
+			},
+			{
+				'name'		: 'catalogProductAttributeTypesListV1',
+				'methods'	: [				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/products/attributes/types',
+						'partition'		: 'CE/Catalog/Products',
+						'method'		: 'RetrieveAllAttributeTypes',
+						'note'			: '',
+						'description'	: ''
+					}
+				]
+			},
+			{
+				'name'		: 'catalogProductCustomOptionRepositoryV1',
+				'methods'	: [				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/products/:sku/options',
+						'partition'		: 'CE/Catalog/Products',
+						'method'		: 'RetrieveAllOptions',
+						'note'			: '',
+						'description'	: ''
+					},				 
+					{
+						'verb'			: 'DELETE',
+						'endpoint'		: '/V1/products/:sku/options/:optionId',
+						'partition'		: 'CE/Catalog/Products',
+						'method'		: 'RemoveOptions',
+						'note'			: '',
+						'description'	: ''
+					},				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/products/:sku/options/:optionId',
+						'partition'		: 'CE/Catalog/Products',
+						'method'		: 'RetrieveOptions',
+						'note'			: '',
+						'description'	: ''
+					},				   
+					{
+						'verb'			: 'POST',
+						'endpoint'		: '/V1/products/options',
+						'partition'		: 'CE/Catalog/Products',
+						'method'		: 'CreateOptions',
+						'note'			: '',
+						'description'	: ''
+					},				    
+					{
+						'verb'			: 'PUT',
+						'endpoint'		: '/V1/products/options/:optionId',
+						'partition'		: 'CE/Catalog/Products',
+						'method'		: 'UpdateOptions',
+						'note'			: '',
+						'description'	: ''
+					}
+				]
+			},
+			{
+				'name'		: 'catalogProductCustomOptionTypeListV1',
+				'methods'	: [				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/products/options/types',
+						'partition'		: 'CE/Catalog/Products',
+						'method'		: 'RetrieveAllOptionsTypes',
+						'note'			: '',
+						'description'	: ''
+					}
+				]
+			},
+			{
+				'name'		: 'catalogProductLinkManagementV1',
+				'methods'	: [				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/products/:sku/links/:type',
+						'partition'		: 'CE/Catalog/Products',
+						'method'		: 'RetriveLinks',
+						'note'			: '',
+						'description'	: ''
+					},				   
+					{
+						'verb'			: 'POST',
+						'endpoint'		: '/V1/products/:sku/links',
+						'partition'		: 'CE/Catalog/Products',
+						'method'		: 'CreateLinks',
+						'note'			: '',
+						'description'	: ''
+					}
+				]
+			},
+			{
+				'name'		: 'catalogProductLinkRepositoryV1',
+				'methods'	: [				    
+					{
+						'verb'			: 'PUT',
+						'endpoint'		: '/V1/products/:sku/links',
+						'partition'		: 'CE/Catalog/Products',
+						'method'		: 'UpdateLinks',
+						'note'			: '',
+						'description'	: ''
+					},				 
+					{
+						'verb'			: 'DELETE',
+						'endpoint'		: '/V1/products/:sku/links/:type/:linkedProductSku',
+						'partition'		: 'CE/Catalog/Products',
+						'method'		: 'RemoveLinks',
+						'note'			: '',
+						'description'	: ''
+					}
+				]
+			},
+			{
+				'name'		: 'catalogProductLinkTypeListV1',
+				'methods'	: [				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/products/links/types',
+						'partition'		: 'CE/Catalog/Products',
+						'method'		: 'RetrieveAllLinksTypes',
+						'note'			: '',
+						'description'	: ''
+					},				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/products/links/:type/attributes',
+						'partition'		: 'CE/Catalog/Products',
+						'method'		: 'RetrieveAllLinksAttributes',
+						'note'			: '',
+						'description'	: ''
+					}
+				]
+			},
+			{
+				'name'		: 'catalogProductMediaAttributeManagementV1',
+				'methods'	: [				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/products/media/types/:attributeSetName',
+						'partition'		: 'CE/Catalog/Products',
+						'method'		: 'RetriveMediaTypes',
+						'note'			: '',
+						'description'	: ''
+					}
+				]
+			},
+			{
+				'name'		: 'catalogProductRepositoryV1',
+				'methods'	: [				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/products',
+						'partition'		: 'CE/Catalog/Products',
+						'method'		: 'RetrieveAll',
+						'note'			: '',
+						'description'	: ''
+					},				   
+					{
+						'verb'			: 'POST',
+						'endpoint'		: '/V1/products',
+						'partition'		: 'CE/Catalog/Products',
+						'method'		: 'Create',
+						'note'			: '',
+						'description'	: ''
+					},				 
+					{
+						'verb'			: 'DELETE',
+						'endpoint'		: '/V1/products/:sku',
+						'partition'		: 'CE/Catalog/Products',
+						'method'		: 'Remove',
+						'note'			: '',
+						'description'	: ''
+					},				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/products/:sku',
+						'partition'		: 'CE/Catalog/Products',
+						'method'		: 'Retrieve',
+						'note'			: '',
+						'description'	: ''
+					},				    
+					{
+						'verb'			: 'PUT',
+						'endpoint'		: '/V1/products/:sku',
+						'partition'		: 'CE/Catalog/Products',
+						'method'		: 'Update',
+						'note'			: '',
+						'description'	: ''
+					}
+				]
+			},
+			{
+				'name'		: 'catalogProductTierPriceManagementV1',
+				'methods'	: [				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/products/:sku/group-prices/:customerGroupId/tiers',
+						'partition'		: 'CE/Catalog/Products',
+						'method'		: 'RetrieveAllGroupPricesTiers',
+						'note'			: '',
+						'description'	: ''
+					},				   
+					{
+						'verb'			: 'POST',
+						'endpoint'		: '/V1/products/:sku/group-prices/:customerGroupId/tiers/:qty/price/:price',
+						'partition'		: 'CE/Catalog/Products',
+						'method'		: 'CreateGroupPricesTiersPrice',
+						'note'			: '',
+						'description'	: ''
+					},				 
+					{
+						'verb'			: 'DELETE',
+						'endpoint'		: '/V1/products/:sku/group-prices/:customerGroupId/tiers/:qty',
+						'partition'		: 'CE/Catalog/Products',
+						'method'		: 'RemoveGroupPricesTiers',
+						'note'			: '',
+						'description'	: ''
+					}
+				]
+			},
+			{
+				'name'		: 'catalogProductTypeListV1',
+				'methods'	: [				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/products/types',
+						'partition'		: 'CE/Catalog/Products',
+						'method'		: 'RetrieveAllTypes',
+						'note'			: '',
+						'description'	: ''
+					}
+				]
+			},
+			{
+				'name'		: 'catalogProductWebsiteLinkRepositoryV1',
+				'methods'	: [				    
+					{
+						'verb'			: 'POST',
+						'endpoint'		: '/V1/products/:sku/websites',
+						'partition'		: 'CE/Catalog/Products',
+						'method'		: 'CreateWebsites',
+						'note'			: '*',
+						'description'	: ''
+					},				     
+					{
+						'verb'			: 'PUT',
+						'endpoint'		: '/V1/products/:sku/websites',
+						'partition'		: 'CE/Catalog/Products',
+						'method'		: 'UpdateWebsites',
+						'note'			: '*',
+						'description'	: ''
+					},				  
+					{
+						'verb'			: 'DELETE',
+						'endpoint'		: '/V1/products/:sku/websites/:websiteId',
+						'partition'		: 'CE/Catalog/Products',
+						'method'		: 'RemoveWebsites',
+						'note'			: '*',
+						'description'	: ''
+					}
+				]
+			}
+		]		
+	}
+}

@@ -1,0 +1,15 @@
+<?php
+	/*
+		FORMAT
+		======
+		{
+		  "id": 0,
+		  "code": "string",
+		  "tax_class_id": 0,
+		  "tax_class_name": "string",
+		  "extension_attributes": {}
+		}
+		PARAMETERS
+		==========
+		id
+	*/

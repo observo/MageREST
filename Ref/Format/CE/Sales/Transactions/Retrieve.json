@@ -1,0 +1,26 @@
+<?php
+	/*
+		FORMAT
+		======
+		{
+		  "transaction_id": 0,
+		  "parent_id": 0,
+		  "order_id": 0,
+		  "payment_id": 0,
+		  "txn_id": "string",
+		  "parent_txn_id": "string",
+		  "txn_type": "string",
+		  "is_closed": 0,
+		  "additional_information": [
+			"string"
+		  ],
+		  "created_at": "string",
+		  "child_transactions": [
+			{}
+		  ],
+		  "extension_attributes": {}
+		}
+		PARAMETERS
+		==========
+		id
+	*/

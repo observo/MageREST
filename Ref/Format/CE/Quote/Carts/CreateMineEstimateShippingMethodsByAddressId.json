@@ -1,0 +1,26 @@
+<?php
+	/*
+		FORMAT
+		======
+		[
+		  {
+			"carrier_code": "string",
+			"method_code": "string",
+			"carrier_title": "string",
+			"method_title": "string",
+			"amount": 0,
+			"base_amount": 0,
+			"available": true,
+			"extension_attributes": {},
+			"error_message": "string",
+			"price_excl_tax": 0,
+			"price_incl_tax": 0
+		  }
+		]
+		PARAMETERS
+		==========
+		$body=
+			{
+			  "addressId": 0
+			}
+	*/

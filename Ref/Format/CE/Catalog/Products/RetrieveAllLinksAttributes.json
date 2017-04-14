@@ -1,0 +1,15 @@
+<?php
+	/*
+		FORMAT
+		======
+		[
+		  {
+			"code": "string",
+			"type": "string",
+			"extension_attributes": {}
+		  }
+		]
+		PARAMETERS
+		==========
+		type
+	*/

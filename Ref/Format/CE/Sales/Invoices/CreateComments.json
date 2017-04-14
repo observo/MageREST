@@ -1,0 +1,28 @@
+<?php
+	/*
+		FORMAT
+		======
+		{
+		  "is_customer_notified": 0,
+		  "parent_id": 0,
+		  "extension_attributes": {},
+		  "comment": "string",
+		  "is_visible_on_front": 0,
+		  "created_at": "string",
+		  "entity_id": 0
+		}
+		PARAMETERS
+		==========
+		$body=
+			{
+			  "entity": {
+				"is_customer_notified": 0,
+				"parent_id": 0,
+				"extension_attributes": {},
+				"comment": "string",
+				"is_visible_on_front": 0,
+				"created_at": "string",
+				"entity_id": 0
+			  }
+			}
+	*/

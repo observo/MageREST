@@ -1,0 +1,13 @@
+<?php
+	/*
+		PARAMETERS
+		==========
+		sku
+		$body=
+			{
+			  "productWebsiteLink": {
+				"sku": "string",
+				"website_id": 0
+			  }
+			}
+	*/

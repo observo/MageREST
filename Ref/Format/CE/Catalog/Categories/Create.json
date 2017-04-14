@@ -1,0 +1,188 @@
+<?php
+	//SCRIPT VARIABLES
+	set_time_limit(0);
+	ini_set('memory_limit', '-1');
+	
+	//REQUIRED FILES
+	require_once(__DIR__.'/../../../../Config/Config.php');
+	require_once(__DIR__.'/../../../../Helper/Helper.php');
+	//require_once(__DIR__.'/../../../../Helper/CE/Integration.Integration.php');
+	
+	//CONFIG VARIABLES
+	$Payload['Config']=$Config;
+	
+	//TABLES
+	$M2Tables=array(
+		'Admin'=>'Token'
+	);	
+	
+	//DB CONNECTION
+	$Con = new mysqli($Config['db']['host'], $Config['db']['user'], $Config['db']['password'], $Config['db']['database']);
+	//CHECK CONNECTION
+	if ($Con->connect_error){
+		die("Connection failed: " . $Con->connect_error);
+	}
+	$Token=GetToken($Con, $M2Tables['Admin']);
+	print_r($Token);
+	
+	//CLOSE DB CONNECTION
+	mysqli_close($Con);
+	
+			
+/*
+//    include("Helper\MagentoAPI\class.MagOrder.php");
+    include("Helper\MagentoAPI\class.MagCategory.php");
+    include ("Helper\class.db.php");
+
+    $env = file_get_contents('env.json');
+    $env = json_decode($env, true);
+
+    $login_data = array("username" => 'admin', "password" => 'Realchoe1');
+
+    $dbFunc          = new DB_Functions();
+    $guzzle_obj      = new MyGuzzle();
+
+    $token = $guzzle_obj->getToken($env['request_url'], $login_data);
+
+    CategoryFromTable($dbFunc, $token, $env['request_url']);
+
+
+    function CategoryFromTable($dbFunc , $token, $request_url)
+    {
+        $CatTableNames = Array('categories_root','categories_make','categories_model','categories_year','categories_pcdb_category','categories_pcdb_subcategory');
+       // $CatTableNames = Array('categories_root','categories_make','categories_model');
+
+        $MagCategory = new MagCategory($token, $request_url);
+//        $body = Array('category' => Array('parent_id' => 605, 'name' => "Audi2", 'is_active' => true, 'position' => 2, 'level' => 2));
+//        $result = ($MagCategory->AddCategory(json_encode($body)));
+//        print_r($result);
+//        exit;
+
+        $level = 0;
+
+        $parent_info = Array();
+
+        foreach ($CatTableNames as $catName)
+        {
+            //Get Data from Table
+            $tableData = ($dbFunc->getCategoryInfo($catName));
+            $parent_info[$level] = Array();
+            try {
+
+                foreach ($tableData as $pp) {
+
+                    if($level == 0)
+                    {
+                        $parent_id = 1;
+                    }
+                    else
+                    {
+                        $parent_lev = $level - 1;
+                        $parent_id_Arr = $parent_info[$parent_lev];
+                        $parent_id = $parent_id_Arr[$pp['parent_id']];
+                    }
+
+                    if($parent_id != null) {
+
+                        $body = Array(
+                            'category' => Array('parent_id' => $parent_id, 'name' => $pp['category_name'], 'is_active' => true,
+                                'position' => 1, 'level' => $level + 1,
+                                'custom_attributes'=>Array(
+                                    Array('attribute_code'=>'old_cat_id','value'=>$pp['row_id']),
+                                    Array('attribute_code'=>'url_key','value'=>$pp['url_key']))));
+
+                        try {
+
+                            $result = ($MagCategory->AddCategory(json_encode($body)));
+                            $qq = json_decode($result->getContents());
+
+                            foreach ($qq as $key => $value) {
+                                if ($key == 'id') {
+                                    $parent_info[$level][$pp['row_id']] = $value;
+                                    break;
+                                }
+                            }
+
+                        }
+                        catch (Exception $e)
+                        {
+                            print_r("Error:"." parent_id:".$parent_id." name:".$pp['category_name']." TableName:".$catName);
+                            echo "<br>";
+                            continue;
+                        }
+
+                    }
+
+                }
+
+
+            }
+            catch (Exception $e)
+            {
+                print_r($e->getMessage());
+                exit;
+            }
+
+            $level++;
+
+        }
+    }
+
+
+    function CategoryDemo()
+    {
+        $CatTableNames = Array('categories_root','categories_make','categories_model','categories_year','categories_pcdb_category','categories_pcdb_subcategory');
+
+
+        $level = 0;
+
+        $parent_info = Array();
+
+        foreach ($CatTableNames as $catName)
+        {
+
+            try {
+                $parent_subinfo = Array();
+
+                for($i =0; $i<2; $i++)
+                {
+                    if($level == 0)
+                    {
+                        $parent_id = 1;
+                    }
+                    else
+                    {
+                        $parent_id = $parent_info[$level-1][0];
+                    }
+
+                    for ($j=0; $j<3; $j++)
+                    {
+                        $parent_subinfo[$j] = 2;
+                    }
+
+
+                }
+
+            }
+            catch (Exception $e)
+            {
+                print_r($e->getMessage());
+            }
+
+            $parent_info[$level] = $parent_subinfo;
+            $level++;
+
+        }
+    }
+
+
+
+    function getOrders($token,$env)
+    {
+        if (is_string($token)) {
+
+            $mgorder = new MagOrders($token, $env['request_url']);
+            $order_data = $mgorder->Retrieve(2);
+        }
+    }
+	*/

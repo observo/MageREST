@@ -1,0 +1,22 @@
+<?php
+	/*
+		FORMAT
+		======
+		{
+		  "failed_items": [
+			"string"
+		  ],
+		  "missing_items": [
+			"string"
+		  ]
+		}
+		PARAMETERS
+		==========
+		$body=
+			{
+			  "codes": [
+				"string"
+			  ],
+			  "ignoreInvalidCoupons": true
+			}
+	*/

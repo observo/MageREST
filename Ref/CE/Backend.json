@@ -1,0 +1,20 @@
+{
+	'module'	: {
+		'name'		: 'Backend',
+		'service'	: [
+			{
+				'name'		: 'backendModuleServiceV1',
+				'methods'	: [
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/modules',
+						'partition'		: 'CE/Backend',
+						'method'		: 'Modules',
+						'note'			: '',
+						'description'	: ''
+					}
+				]
+			}
+		]
+	}
+}

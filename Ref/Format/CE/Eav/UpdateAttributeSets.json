@@ -1,0 +1,25 @@
+<?php
+	/*
+		FORMAT
+		======
+		{
+		  "attribute_set_id": 0,
+		  "attribute_set_name": "string",
+		  "sort_order": 0,
+		  "entity_type_id": 0,
+		  "extension_attributes": {}
+		}		
+		PARAMETERS
+		==========
+		attributeSetId
+		$body=
+			{
+			  "attributeSet": {
+				"attribute_set_id": 0,
+				"attribute_set_name": "string",
+				"sort_order": 0,
+				"entity_type_id": 0,
+				"extension_attributes": {}
+			  }
+			}
+	*/

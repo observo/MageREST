@@ -1,0 +1,581 @@
+{
+	'module'	: {
+		'name'   : 'Sales',
+		'service'	: [
+			{
+				'name'		: 'salesCreditmemoCommentRepositoryV1',
+				'methods'	: [				   
+					{
+						'verb'			: 'POST',
+						'endpoint'		: '/V1/creditmemo/:id/comments',
+						'partition'		: 'CE/Sales/Creditmemo',
+						'method'		: 'CreateComments',
+						'note'			: '',
+						'description'	: ''
+					}
+				]
+			},
+			{
+				'name'		: 'salesCreditmemoManagementV1',
+				'methods'	: [				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/creditmemo/:id/comments',
+						'partition'		: 'CE/Sales/Creditmemo',
+						'method'		: 'RetrieveAllComments',
+						'note'			: '',
+						'description'	: ''
+					},				    
+					{
+						'verb'			: 'PUT',
+						'endpoint'		: '/V1/creditmemo/:id',
+						'partition'		: 'CE/Sales/Creditmemo',
+						'method'		: 'Update',
+						'note'			: '',
+						'description'	: ''
+					},				   
+					{
+						'verb'			: 'POST',
+						'endpoint'		: '/V1/creditmemo/:id/emails',
+						'partition'		: 'CE/Sales/Creditmemo',
+						'method'		: 'CreateEmails',
+						'note'			: '',
+						'description'	: ''
+					},				   
+					{
+						'verb'			: 'POST',
+						'endpoint'		: '/V1/creditmemo/refund',
+						'partition'		: 'CE/Sales/Creditmemo',
+						'method'		: 'Refund',
+						'note'			: '',
+						'description'	: ''
+					}
+				]
+			},
+			{
+				'name'		: 'salesCreditmemoRepositoryV1',
+				'methods'	: [				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/creditmemo/:id',
+						'partition'		: 'CE/Sales/Creditmemo',
+						'method'		: 'Retrieve',
+						'note'			: '',
+						'description'	: ''
+					},				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/creditmemos',
+						'partition'		: 'CE/Sales/Creditmemo',
+						'method'		: 'RetrieveAll',
+						'note'			: '',
+						'description'	: ''
+					},				   
+					{
+						'verb'			: 'POST',
+						'endpoint'		: '/V1/creditmemo',
+						'partition'		: 'CE/Sales/Creditmemo',
+						'method'		: 'Create',
+						'note'			: '',
+						'description'	: ''
+					}
+				]
+			},
+			{
+				'name'		: 'salesInvoiceCommentRepositoryV1',
+				'methods'	: [				   
+					{
+						'verb'			: 'POST',
+						'endpoint'		: '/V1/invoices/comments',
+						'partition'		: 'CE/Sales/Invoices',
+						'method'		: 'CreateComments',
+						'note'			: '',
+						'description'	: ''
+					}
+				]
+			},
+			{
+				'name'		: 'salesInvoiceManagementV1',
+				'methods'	: [				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/invoices/:id/comments',
+						'partition'		: 'CE/Sales/Invoices',
+						'method'		: 'RetrieveAllComments',
+						'note'			: '',
+						'description'	: ''
+					},				   
+					{
+						'verb'			: 'POST',
+						'endpoint'		: '/V1/invoices/:id/emails',
+						'partition'		: 'CE/Sales/Invoices',
+						'method'		: 'CreateEmails',
+						'note'			: '',
+						'description'	: ''
+					},				   
+					{
+						'verb'			: 'POST',
+						'endpoint'		: '/V1/invoices/:id/void',
+						'partition'		: 'CE/Sales/Invoices',
+						'method'		: 'Invalidate',
+						'note'			: '',
+						'description'	: ''
+					},				   
+					{
+						'verb'			: 'POST',
+						'endpoint'		: '/V1/invoices/:id/capture',
+						'partition'		: 'CE/Sales/Invoices',
+						'method'		: 'Capture',
+						'note'			: '',
+						'description'	: ''
+					}
+				]
+			},
+			{
+				'name'		: 'salesInvoiceOrderV1',
+				'methods'	: [				  
+					{
+						'verb'			: 'POST',
+						'endpoint'		: '/V1/order/:orderId/invoice',
+						'partition'		: 'CE/Sales/Orders',
+						'method'		: 'CreateInvoice',
+						'note'			: '*',
+						'description'	: ''
+					}
+				]
+			},
+			{
+				'name'		: 'salesInvoiceRepositoryV1',
+				'methods'	: [				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/invoices/:id',
+						'partition'		: 'CE/Sales/Invoices',
+						'method'		: 'Retrieve',
+						'note'			: '',
+						'description'	: ''
+					},				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/invoices',
+						'partition'		: 'CE/Sales/Invoices',
+						'method'		: 'RetrieveAll',
+						'note'			: '',
+						'description'	: ''
+					},				   
+					{
+						'verb'			: 'POST',
+						'endpoint'		: '/V1/invoices/',
+						'partition'		: 'CE/Sales/Invoices',
+						'method'		: 'Create',
+						'note'			: '',
+						'description'	: ''
+					}
+				]
+			},
+			{
+				'name'		: 'salesOrderAddressRepositoryV1',
+				'methods'	: [				    
+					{
+						'verb'			: 'PUT',
+						'endpoint'		: '/V1/orders/:parent_id',
+						'partition'		: 'CE/Sales/Orders',
+						'method'		: 'UpdateOrders',
+						'note'			: '',
+						'description'	: ''
+					}
+				]
+			},
+			{
+				'name'		: 'salesOrderItemRepositoryV1',
+				'methods'	: [				     
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/orders/items/:id',
+						'partition'		: 'CE/Sales/Orders',
+						'method'		: 'RetrieveItems',
+						'note'			: '*',
+						'description'	: ''
+					},				     
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/orders/items',
+						'partition'		: 'CE/Sales/Orders',
+						'method'		: 'RetrieveAllItems',
+						'note'			: '*',
+						'description'	: ''
+					}
+				]
+			},
+			{
+				'name'		: 'salesOrderManagementV1',
+				'methods'	: [				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/orders/:id/statuses',
+						'partition'		: 'CE/Sales/Orders',
+						'method'		: 'RetrieveAllStatuses',
+						'note'			: '',
+						'description'	: ''
+					},				   
+					{
+						'verb'			: 'POST',
+						'endpoint'		: '/V1/orders/:id/cancel',
+						'partition'		: 'CE/Sales/Orders',
+						'method'		: 'Cancel',
+						'note'			: '',
+						'description'	: ''
+					},				   
+					{
+						'verb'			: 'POST',
+						'endpoint'		: '/V1/orders/:id/emails',
+						'partition'		: 'CE/Sales/Orders',
+						'method'		: 'CreateEmails',
+						'note'			: '',
+						'description'	: ''
+					},				   
+					{
+						'verb'			: 'POST',
+						'endpoint'		: '/V1/orders/:id/hold',
+						'partition'		: 'CE/Sales/Orders',
+						'method'		: 'Hold',
+						'note'			: '',
+						'description'	: ''
+					},				   
+					{
+						'verb'			: 'POST',
+						'endpoint'		: '/V1/orders/:id/unhold',
+						'partition'		: 'CE/Sales/Orders',
+						'method'		: 'Unhold',
+						'note'			: '',
+						'description'	: ''
+					},				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/orders/:id/comments',
+						'partition'		: 'CE/Sales/Orders',
+						'method'		: 'RetrieveAllComments',
+						'note'			: '',
+						'description'	: ''
+					},				   
+					{
+						'verb'			: 'POST',
+						'endpoint'		: '/V1/orders/:id/comments',
+						'partition'		: 'CE/Sales/Orders',
+						'method'		: 'CreateComments',
+						'note'			: '',
+						'description'	: ''
+					}
+				]
+			},
+			{
+				'name'		: 'salesOrderRepositoryV1',
+				'methods'	: [				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/orders/:id',
+						'partition'		: 'CE/Sales/Orders',
+						'method'		: 'Retrieve',
+						'note'			: '',
+						'description'	: ''
+					},				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/orders',
+						'partition'		: 'CE/Sales/Orders',
+						'method'		: 'RetrieveAll',
+						'note'			: '',
+						'description'	: ''
+					},				    
+					{
+						'verb'			: 'PUT',
+						'endpoint'		: '/V1/orders/create',
+						'partition'		: 'CE/Sales/Orders',
+						'method'		: 'UpdateCreate',
+						'note'			: '',
+						'description'	: ''
+					},				   
+					{
+						'verb'			: 'POST',
+						'endpoint'		: '/V1/orders/',
+						'partition'		: 'CE/Sales/Orders',
+						'method'		: 'Create',
+						'note'			: '',
+						'description'	: ''
+					}
+				]
+			},
+			{
+				'name'		: 'salesRefundInvoiceV1',
+				'methods'	: [				  
+					{
+						'verb'			: 'POST',
+						'endpoint'		: '/V1/invoice/:invoiceId/refund',
+						'partition'		: 'CE/Sales/',
+						'method'		: 'Refund',
+						'note'			: '*',
+						'description'	: ''
+					}
+				]
+			},
+			{
+				'name'		: 'salesRefundOrderV1',
+				'methods'	: [				  
+					{
+						'verb'			: 'POST',
+						'endpoint'		: '/V1/order/:orderId/refund',
+						'partition'		: 'CE/Sales/Orders',
+						'method'		: 'Refund',
+						'note'			: '*',
+						'description'	: ''
+					}
+				]
+			},
+			{
+				'name'		: 'salesRuleCouponManagementV1',
+				'methods'	: [				   
+					{
+						'verb'			: 'POST',
+						'endpoint'		: '/V1/coupons/generate',
+						'partition'		: 'CE/Sales/Coupons',
+						'method'		: 'Generate',
+						'note'			: '',
+						'description'	: ''
+					},				   
+					{
+						'verb'			: 'POST',
+						'endpoint'		: '/V1/coupons/deleteByIds',
+						'partition'		: 'CE/Sales/Coupons',
+						'method'		: 'DeleteByIds',
+						'note'			: '',
+						'description'	: ''
+					},				   
+					{
+						'verb'			: 'POST',
+						'endpoint'		: '/V1/coupons/deleteByCodes',
+						'partition'		: 'CE/Sales/Coupons',
+						'method'		: 'DeleteByCodes',
+						'note'			: '',
+						'description'	: ''
+					}
+				]
+			},
+			{
+				'name'		: 'salesRuleCouponRepositoryV1',
+				'methods'	: [				 
+					{
+						'verb'			: 'DELETE',
+						'endpoint'		: '/V1/coupons/:couponId',
+						'partition'		: 'CE/Sales/Coupons',
+						'method'		: 'Remove',
+						'note'			: '',
+						'description'	: ''
+					},				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/coupons/:couponId',
+						'partition'		: 'CE/Sales/Coupons',
+						'method'		: 'Retrieve',
+						'note'			: '',
+						'description'	: ''
+					},				    
+					{
+						'verb'			: 'PUT',
+						'endpoint'		: '/V1/coupons/:couponId',
+						'partition'		: 'CE/Sales/Coupons',
+						'method'		: 'Update',
+						'note'			: '',
+						'description'	: ''
+					},				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/coupons/search',
+						'partition'		: 'CE/Sales/Coupons',
+						'method'		: 'Search',
+						'note'			: '',
+						'description'	: ''
+					},				   
+					{
+						'verb'			: 'POST',
+						'endpoint'		: '/V1/coupons',
+						'partition'		: 'CE/Sales/Coupons',
+						'method'		: 'Create',
+						'note'			: '',
+						'description'	: ''
+					}
+				]
+			},
+			{
+				'name'		: 'salesRuleRuleRepositoryV1',
+				'methods'	: [				 
+					{
+						'verb'			: 'DELETE',
+						'endpoint'		: '/V1/salesRules/:ruleId',
+						'partition'		: 'CE/Sales/SalesRules',
+						'method'		: 'Remove',
+						'note'			: '',
+						'description'	: ''
+					},				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/salesRules/:ruleId',
+						'partition'		: 'CE/Sales/SalesRules',
+						'method'		: 'Retrieve',
+						'note'			: '',
+						'description'	: ''
+					},				    
+					{
+						'verb'			: 'PUT',
+						'endpoint'		: '/V1/salesRules/:ruleId',
+						'partition'		: 'CE/Sales/SalesRules',
+						'method'		: 'Update',
+						'note'			: '',
+						'description'	: ''
+					},				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/salesRules/search',
+						'partition'		: 'CE/Sales/SalesRules',
+						'method'		: 'Search',
+						'note'			: '',
+						'description'	: ''
+					},				   
+					{
+						'verb'			: 'POST',
+						'endpoint'		: '/V1/salesRules',
+						'partition'		: 'CE/Sales/SalesRules',
+						'method'		: 'Create',
+						'note'			: '',
+						'description'	: ''
+					}
+				]
+			},
+			{
+				'name'		: 'salesShipmentCommentRepositoryV1',
+				'methods'	: [				   
+					{
+						'verb'			: 'POST',
+						'endpoint'		: '/V1/shipment/:id/comments',
+						'partition'		: 'CE/Sales/Shipment',
+						'method'		: 'CreateComments',
+						'note'			: '',
+						'description'	: ''
+					}
+				]
+			},
+			{
+				'name'		: 'salesShipmentManagementV1',
+				'methods'	: [				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/shipment/:id/comments',
+						'partition'		: 'CE/Sales/Shipment',
+						'method'		: 'RetrieveAllComments',
+						'note'			: '',
+						'description'	: ''
+					},				   
+					{
+						'verb'			: 'POST',
+						'endpoint'		: '/V1/shipment/:id/emails',
+						'partition'		: 'CE/Sales/Shipment',
+						'method'		: 'CreateEmails',
+						'note'			: '',
+						'description'	: ''
+					},				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/shipment/:id/label',
+						'partition'		: 'CE/Sales/Shipment',
+						'method'		: 'RetrieveAllLabel',
+						'note'			: '',
+						'description'	: ''
+					}
+				]
+			},
+			{
+				'name'		: 'salesShipmentRepositoryV1',
+				'methods'	: [				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/shipment/:id',
+						'partition'		: 'CE/Sales/Shipment',
+						'method'		: 'Retrieve',
+						'note'			: '',
+						'description'	: ''
+					},				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/shipments',
+						'partition'		: 'CE/Sales/Shipment',
+						'method'		: 'RetrieveAll',
+						'note'			: '',
+						'description'	: ''
+					},				   
+					{
+						'verb'			: 'POST',
+						'endpoint'		: '/V1/shipment/',
+						'partition'		: 'CE/Sales/Shipment',
+						'method'		: 'Create',
+						'note'			: '',
+						'description'	: ''
+					}
+				]
+			},
+			{
+				'name'		: 'salesShipmentTrackRepositoryV1',
+				'methods'	: [				   
+					{
+						'verb'			: 'POST',
+						'endpoint'		: '/V1/shipment/track',
+						'partition'		: 'CE/Sales/Shipment',
+						'method'		: 'CreateTrack',
+						'note'			: '',
+						'description'	: ''
+					},				 
+					{
+						'verb'			: 'DELETE',
+						'endpoint'		: '/V1/shipment/track/:id',
+						'partition'		: 'CE/Sales/Shipment',
+						'method'		: 'RemoveTrack',
+						'note'			: '',
+						'description'	: ''
+					}
+				]
+			},
+			{
+				'name'		: 'salesShipOrderV1',
+				'methods'	: [				  
+					{
+						'verb'			: 'POST',
+						'endpoint'		: '/V1/order/:orderId/ship',
+						'partition'		: 'CE/Sales/Orders',
+						'method'		: 'Ship',
+						'note'			: '*',
+						'description'	: ''
+					}
+				]
+			},
+			{
+				'name'		: 'salesTransactionRepositoryV1',
+				'methods'	: [				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/transactions/:id',
+						'partition'		: 'CE/Sales/Transactions',
+						'method'		: 'Retrieve',
+						'note'			: '',
+						'description'	: ''
+					},				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/transactions',
+						'partition'		: 'CE/Sales/Transactions',
+						'method'		: 'RetrieveAll',
+						'note'			: '',
+						'description'	: ''
+					}
+				]
+			}
+		]		
+	}		
+}

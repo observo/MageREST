@@ -1,0 +1,45 @@
+<?php
+	/*
+		FORMAT
+		======
+		  {
+			"frontend_input": "string",
+			"input_filter": "string",
+			"store_label": "string",
+			"validation_rules": [
+			  {
+				"name": "string",
+				"value": "string"
+			  }
+			],
+			"multiline_count": 0,
+			"visible": true,
+			"required": true,
+			"data_model": "string",
+			"options": [
+			  {
+				"label": "string",
+				"value": "string",
+				"options": [
+				  {}
+				]
+			  }
+			],
+			"frontend_class": "string",
+			"user_defined": true,
+			"sort_order": 0,
+			"frontend_label": "string",
+			"note": "string",
+			"system": true,
+			"backend_type": "string",
+			"is_used_in_grid": true,
+			"is_visible_in_grid": true,
+			"is_filterable_in_grid": true,
+			"is_searchable_in_grid": true,
+			"attribute_code": "string"
+		  }
+		]
+		
+		PARAMETERS
+		==========
+	*/

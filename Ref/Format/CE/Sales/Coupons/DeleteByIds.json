@@ -1,0 +1,12 @@
+<?php
+	/*
+		PARAMETERS
+		==========
+		$body=
+			{
+			  "ids": [
+				0
+			  ],
+			  "ignoreInvalidCoupons": true
+			}
+	*/

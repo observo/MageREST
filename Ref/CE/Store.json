@@ -1,0 +1,59 @@
+{
+	'module'	: {
+		'name'   : 'Store',
+		'service'	: [
+			{
+				'name'		: 'storeGroupRepositoryV1',
+				'methods'	: [				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/store/storeGroups',
+						'partition'		: 'CE/Store',
+						'method'		: 'RetrieveAllStoreGroups',
+						'note'			: '',
+						'description'	: ''
+					}
+				]
+			},
+			{
+				'name'		: 'storeStoreConfigManagerV1',
+				'methods'	: [				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/store/storeConfigs',
+						'partition'		: 'CE/Store',
+						'method'		: 'RetrieveAllStoreConfigs',
+						'note'			: '',
+						'description'	: ''
+					}
+				]
+			},
+			{
+				'name'		: 'storeStoreRepositoryV1',
+				'methods'	: [				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/store/storeViews',
+						'partition'		: 'CE/Store',
+						'method'		: 'RetrieveAllStoreViews',
+						'note'			: '',
+						'description'	: ''
+					}
+				]
+			},
+			{
+				'name'		: 'storeWebsiteRepositoryV1',
+				'methods'	: [				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/store/websites',
+						'partition'		: 'CE/Store',
+						'method'		: 'RetrieveAllWebsites',
+						'note'			: '',
+						'description'	: ''
+					}
+				]
+			}
+		]		
+	}		 
+}

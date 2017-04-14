@@ -1,0 +1,23 @@
+<?php
+	/*
+		FORMAT
+		======
+		[
+		  {
+			"id": "string",
+			"two_letter_abbreviation": "string",
+			"three_letter_abbreviation": "string",
+			"full_name_locale": "string",
+			"full_name_english": "string",
+			"available_regions": [
+			  {
+				"id": "string",
+				"code": "string",
+				"name": "string",
+				"extension_attributes": {}
+			  }
+			],
+			"extension_attributes": {}
+		  }
+		]
+	*/

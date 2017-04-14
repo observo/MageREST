@@ -1,0 +1,29 @@
+<?php
+	/*
+		FORMAT
+		======
+		{
+		  "attribute_group_id": "string",
+		  "attribute_group_name": "string",
+		  "attribute_set_id": 0,
+		  "extension_attributes": {
+			"attribute_group_code": "string",
+			"sort_order": "string"
+		  }
+		}
+		PARAMETERS
+		==========
+		attributeSetId
+		$body=
+			{
+			  "group": {
+				"attribute_group_id": "string",
+				"attribute_group_name": "string",
+				"attribute_set_id": 0,
+				"extension_attributes": {
+				  "attribute_group_code": "string",
+				  "sort_order": "string"
+				}
+			  }
+			}
+	*/

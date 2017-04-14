@@ -1,0 +1,21 @@
+<?php
+	/*
+		PARAMETERS
+		==========
+		sku
+		$body=
+			{
+			  "items": [
+				{
+				  "sku": "string",
+				  "link_type": "string",
+				  "linked_product_sku": "string",
+				  "linked_product_type": "string",
+				  "position": 0,
+				  "extension_attributes": {
+					"qty": 0
+				  }
+				}
+			  ]
+			}
+	*/

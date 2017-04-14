@@ -1,0 +1,9 @@
+<?php
+	/*
+		PARAMETERS
+		==========
+		sku
+		customerGroupId
+		price
+		qty
+	*/

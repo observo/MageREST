@@ -1,0 +1,102 @@
+{
+	'module'	: {
+		'name'   	: 'Bundle',
+		'service'	: [
+			{
+				'name'		: 'bundleProductLinkManagementV1',
+				'methods'	: [				   
+					{
+						'verb'			: 'POST',
+						'endpoint'		: '/V1/bundle-products/:sku/links/:optionId',
+						'partition'		: 'CE/Bundle',
+						'method'		: 'CreateLinks',
+						'note'			: '',
+						'description'	: ''
+					},				    
+					{
+						'verb'			: 'PUT',
+						'endpoint'		: '/V1/bundle-products/:sku/links/:id',
+						'partition'		: 'CE/Bundle',
+						'method'		: 'UpdateLinks',
+						'note'			: '',
+						'description'	: ''
+					},				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/bundle-products/:productSku/children',
+						'partition'		: 'CE/Bundle',
+						'method'		: 'RetriveAllChildren',
+						'note'			: '',
+						'description'	: ''
+					},				 
+					{
+						'verb'			: 'DELETE',
+						'endpoint'		: '/V1/bundle-products/:sku/options/:optionId/children/:childSku',
+						'partition'		: 'CE/Bundle',
+						'method'		: 'RemoveOptionsChildren',
+						'note'			: '',
+						'description'	: ''
+					}
+				]
+			},
+			{
+				'name'		: 'bundleProductOptionManagementV1',
+				'methods'	: [				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/bundle-products/:sku/options/all',
+						'partition'		: 'CE/Bundle',
+						'method'		: 'RetrieveAllOptionsAll',
+						'note'			: '',
+						'description'	: ''
+					},				 
+					{
+						'verb'			: 'DELETE',
+						'endpoint'		: '/V1/bundle-products/:sku/options/:optionId',
+						'partition'		: 'CE/Bundle',
+						'method'		: 'RemoveOptions',
+						'note'			: '',
+						'description'	: ''
+					},				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/bundle-products/:sku/options/:optionId',
+						'partition'		: 'CE/Bundle',
+						'method'		: 'RetrieveOptions',
+						'note'			: '',
+						'description'	: ''
+					}
+				]
+			},
+			{
+				'name'		: 'bundleProductOptionTypeListV1',
+				'methods'	: [				   
+					{
+						'verb'			: 'POST',
+						'endpoint'		: '/V1/bundle-products/options/add',
+						'partition'		: 'CE/Bundle',
+						'method'		: 'CreateOptionsAdd',
+						'note'			: '',
+						'description'	: ''
+					},				    
+					{
+						'verb'			: 'PUT',
+						'endpoint'		: '/V1/bundle-products/options/:optionId',
+						'partition'		: 'CE/Bundle',
+						'method'		: 'UpdateOptions',
+						'note'			: '',
+						'description'	: ''
+					},				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/bundle-products/options/types',
+						'partition'		: 'CE/Bundle',
+						'method'		: 'RetrieveAllOptionsAll',
+						'note'			: '',
+						'description'	: ''
+					}
+				]
+			}
+		]		
+	}
+}

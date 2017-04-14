@@ -1,0 +1,25 @@
+<?php
+	/*
+		FORMAT
+		======
+		{
+		  "id": 0,
+		  "code": "string",
+		  "priority": 0,
+		  "position": 0,
+		  "customer_tax_class_ids": [
+			0
+		  ],
+		  "product_tax_class_ids": [
+			0
+		  ],
+		  "tax_rate_ids": [
+			0
+		  ],
+		  "calculate_subtotal": true,
+		  "extension_attributes": {}
+		}
+		PARAMETERS
+		==========
+		ruleId
+	*/

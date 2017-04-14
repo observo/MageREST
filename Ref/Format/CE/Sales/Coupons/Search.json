@@ -1,0 +1,53 @@
+<?php
+	/*
+		FORMAT
+		======
+		{
+		  "items": [
+			{
+			  "coupon_id": 0,
+			  "rule_id": 0,
+			  "code": "string",
+			  "usage_limit": 0,
+			  "usage_per_customer": 0,
+			  "times_used": 0,
+			  "expiration_date": "string",
+			  "is_primary": true,
+			  "created_at": "string",
+			  "type": 0,
+			  "extension_attributes": {}
+			}
+		  ],
+		  "search_criteria": {
+			"filter_groups": [
+			  {
+				"filters": [
+				  {
+					"field": "string",
+					"value": "string",
+					"condition_type": "string"
+				  }
+				]
+			  }
+			],
+			"sort_orders": [
+			  {
+				"field": "string",
+				"direction": "string"
+			  }
+			],
+			"page_size": 0,
+			"current_page": 0
+		  },
+		  "total_count": 0
+		}		
+		PARAMETERS
+		==========
+		searchCriteria[filterGroups][][filters][][field]
+		searchCriteria[filterGroups][][filters][][value]
+		searchCriteria[filterGroups][][filters][][conditionType]
+		searchCriteria[sortOrders][][field]
+		searchCriteria[sortOrders][][direction]
+		searchCriteria[pageSize]
+		searchCriteria[currentPage]
+	*/

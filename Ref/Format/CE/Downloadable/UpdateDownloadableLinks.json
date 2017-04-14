@@ -1,0 +1,36 @@
+<?php
+	/*
+		PARAMETERS
+		==========
+		sku
+		id
+		$body=
+			{
+			  "link": {
+				"id": 0,
+				"title": "string",
+				"sort_order": 0,
+				"is_shareable": 0,
+				"price": 0,
+				"number_of_downloads": 0,
+				"link_type": "string",
+				"link_file": "string",
+				"link_file_content": {
+				  "file_data": "string",
+				  "name": "string",
+				  "extension_attributes": {}
+				},
+				"link_url": "string",
+				"sample_type": "string",
+				"sample_file": "string",
+				"sample_file_content": {
+				  "file_data": "string",
+				  "name": "string",
+				  "extension_attributes": {}
+				},
+				"sample_url": "string",
+				"extension_attributes": {}
+			  },
+			  "isGlobalScopeContent": true
+			}
+	*/

@@ -1,0 +1,239 @@
+<?php
+	//STEP-0
+	//REQUIRED FILES
+	require_once(__DIR__.'/../../../../Config/Config.php');
+	//CONFIG VARIABLES
+	$Lexicon['ParentID']='row_parent_id';
+	//DB CONNECTION OPEN
+	$Con = new mysqli($Config['db']['host'], $Config['db']['user'], $Config['db']['password'], $Config['db']['database']);
+	//CHECK CONNECTION
+	if ($Con->connect_error){
+		die("Connection failed: " . $Con->connect_error);
+	}
+	//NECESSARY TABLES
+	$Tables['Feed']='ebay_feed_rawfeed';
+	$Tables['Root']='categories_root';
+	$Tables['Make']='categories_make';
+	$Tables['Model']='categories_model';
+	$Tables['Year']='categories_year';
+	$Tables['Map']='pcdb_ebay_category_map';
+	$Tables['Cat']='categories_pcdb_category';
+	$Tables['Subcat']='categories_pcdb_subcategory';
+		
+	$SelectFeed="SELECT * FROM `".$Tables['Feed']."` WHERE `row_is_synced`=0 AND `row_is_active`=1;";
+	$FeedResultset=mysqli_query($Con, $SelectFeed);
+	if($FeedResultset->num_rows>0){
+		while($FeedResult=mysqli_fetch_assoc($FeedResultset)){
+			if(!empty($FeedResult)){				
+				$Product=array();
+				//BASE ATTRIBUTES				
+				if(!empty($FeedResult['listing_id'])){
+					$Product['Base']['sku']=$FeedResult['listing_id'];
+				}				
+				if(!empty($FeedResult['item_title'])){
+					$Product['Base']['name']=$FeedResult['item_title'];
+				}				
+				if(!empty($FeedResult['product_description'])){
+					$Product['Base']['description']=$FeedResult['product_description'];
+				}				
+				if(!empty($FeedResult['shipping_price'])){
+					$Product['Base']['price']=$FeedResult['current_price']+$FeedResult['shipping_price'];
+				}else{
+					$Product['Base']['price']=$FeedResult['current_price'];
+				}
+				if(!empty($FeedResult['item_title'])){
+					$Product['Base']['meta_title']=$FeedResult['item_title'];
+					$Product['Base']['meta_keywords']=$FeedResult['item_title'];
+					$Product['Base']['meta_description']=$FeedResult['item_title'];
+				}				
+				if(!empty($FeedResult['unit_quantity'])){
+					$Product['Base']['qty']=$FeedResult['unit_quantity'];
+				}
+				$Product['Base']['out_of_stock_qty']=0;
+				$Product['Base']['is_qty_decimal']=	1;
+				$Product['Base']['allow_backorders']=0;
+				$Product['Base']['use_config_backorders']=1;
+				$Product['Base']['min_cart_qty']=1;
+				$Product['Base']['use_config_min_sale_qty']=1;
+				$Product['Base']['use_config_max_sale_qty']=1;
+				$Product['Base']['is_in_stock']=1;
+				$Product['Base']['notify_on_stock_below']=2;
+				$Product['Base']['use_config_notify_stock_qty']=1;
+				$Product['Base']['manage_stock']=1;
+				$Product['Base']['use_config_manage_stock']=1;
+				$Product['Base']['use_config_qty_increments']=1;
+				$Product['Base']['qty_increments']=1;
+				$Product['Base']['use_config_enable_qty_inc']=1;
+				$Product['Base']['enable_qty_increments']=1;
+				$Product['Base']['is_decimal_divided']=0;
+				//ADDITIONALATTRIBUTES				
+				if(!empty($FeedResult['year'])){
+					$Product['AdditionalAttributes']['year']=$FeedResult['year'];
+				}				
+				if(!empty($FeedResult['make'])){
+					$Product['AdditionalAttributes']['make']=$FeedResult['make'];
+				}				
+				if(!empty($FeedResult['model'])){
+					$Product['AdditionalAttributes']['model']=$FeedResult['model'];
+				}				
+				if(!empty($FeedResult['mfr_part_number'])){
+					$Product['AdditionalAttributes']['mfr_part_number']=$FeedResult['mfr_part_number'];
+				}				
+				if(!empty($FeedResult['condition'])){
+					$Product['AdditionalAttributes']['condition']=$FeedResult['condition'];
+				}				
+				if(!empty($FeedResult['color'])){
+					$Product['AdditionalAttributes']['product_color']=$FeedResult['color'];
+				}				
+				if(!empty($FeedResult['mfr_name'])){
+					$Product['AdditionalAttributes']['manufacturer']=$FeedResult['mfr_name'];
+				}				
+				if(!empty($FeedResult['url'])){
+					$Product['AdditionalAttributes']['ebay_affiliate_url']='5338058087'.$FeedResult['url'];
+				}
+				//CALL IMAGE ENDPOINT
+				//http://devdocs.magento.com/guides/m1x/api/rest/Resources/Products/product_images.html
+				if(!empty($FeedResult['gallery_url'])){
+					$Images=explode(';', $FeedResult['gallery_url']);
+					foreach($Images as $IKey=>$IValue){
+						if($IKey==0){
+							//THUMBNAIL IMAGE
+							$ThumnailImage=array();
+							$ThumnailImage['thumbnail']=$IValue;
+							$ThumnailImage['thumbnail_image_label']=$FeedResult['item_title'];
+							$Product['Images']['ThumnailImage'][]=$ThumnailImage;
+						}else if($IKey==0){
+							//BASE IMAGE
+							$BaseImage=array();
+							$BaseImage['base_image']=$IValue;
+							$BaseImage['base_image_label']=$FeedResult['item_title'];
+							$Product['Images']['BaseImage'][]=$BaseImage;
+						}else{
+							//SMALL IMAGE
+							$SmallImage=array();
+							$SmallImage['small_image']=$IValue;
+							$SmallImage['small_image_label']=$FeedResult['item_title'];
+							$Product['Images']['SmallImage'][]=$SmallImage;
+						}
+					}
+				}
+				//CALL PRODUCT API AFTER GETTING DATA FROM THIS CURRENT ROW.
+				//***NOT IMPLEMENTED YET.
+				//STEP-2
+				//FOR EACH PRODUCT, WE NEED TO BUILD $Inquiry ARRAY.
+				//$Inquiry['type']
+				//$Inquiry['make']
+				//$Inquiry['model']	
+				//$Inquiry['year']
+				//$Inquiry['L2_category_id']
+				$Inquiry=array();
+				$Inquiry['type']=!empty($FeedResult['condition'])? trim($FeedResult['condition']) : '';
+				$Inquiry['make']=!empty($FeedResult['make'])? trim($FeedResult['make']) : '';
+				$Inquiry['model']=!empty($FeedResult['model'])? trim($FeedResult['model']) : '';
+				$Inquiry['year']=!empty($FeedResult['year'])? trim($FeedResult['year']) : '';
+				$Inquiry['L2_category_id']=!empty($FeedResult['L2_category_id'])? trim($FeedResult['L2_category_id']) : '';
+				//ANYTHING NOT 'New' is 'Used'.
+				if(!empty($Inquiry['type'])){
+					$Inquiry['type']=$FeedResult['type']=='New'? 'New' : 'Used';
+				}
+				//2-DIGITS ARE CONVERTED IN A WAY FUTURE YEAR IS TURNED BACK 100 YEARS AGO AND 
+				//IF A YEAR IS LESS THAN THE BASE YEAR=1960, THIS IS HANDLED APPROPRIATELY.
+				if(!empty($Inquiry['year'])){
+					$YearLength=length($Inquiry['year']);
+					if($YearLength==2){
+						$Year = '20'.$Inquiry['year'];
+						if($Year > date('Y')){
+							$Year= $Year - 100;
+						}
+						$Inquiry['year']=$Year;
+					}
+					if($Inquiry['year']<'1960'){
+						$Inquiry['year']='<1960';
+					}
+				}
+				//STEP-3
+				$ID=array();
+				//STEP-3-i
+				//IN categories_root TABLE, WE WILL USE $Inquiry['type'] AGAINST category_name AND WE WILL FIND $ID['type']=row_id.
+				$SelectStatement="SELECT * FROM `".$Tables['Root']."` WHERE `category_name`='".$Inquiry['type']."' LIMIT 1;";
+				$Resultset=mysqli_query($Con, $SelectStatement);
+				if($Resultset->num_rows>0){
+					while($Result=mysqli_fetch_assoc($Resultset)){
+						if(!empty($Result)){
+							$ID['type']=$Result['row_id'];
+						}
+					}
+				}
+				//STEP-3-ii
+				//IN categories_make TABLE,  WE WILL USE $Inquiry['make'] AGAINST category_name AND $ID['type'] AGAINST row_parent_id AND WE WILL FIND $ID['make']=row_id.
+				$SelectStatement="SELECT * FROM `".$Tables['Make']."` WHERE `category_name`='".$Inquiry['make']."' AND `".$Lexicon['ParentID']."`='".$ID['type']."' LIMIT 1;";
+				$Resultset=mysqli_query($Con, $SelectStatement);
+				if($Resultset->num_rows>0){
+					while($Result=mysqli_fetch_assoc($Resultset)){
+						if(!empty($Result)){
+							$ID['make']=$Result['row_id'];
+						}
+					}
+				}
+				//STEP-3-iii
+				//IN categories_model TABLE,  WE WILL USE $Inquiry['model'] AGAINST category_name AND $ID['make'] AGAINST row_parent_id AND WE WILL FIND $ID['model']=row_id.
+				$SelectStatement="SELECT * FROM `".$Tables['Model']."` WHERE `category_name`='".$Inquiry['model']."' AND `".$Lexicon['ParentID']."`='".$ID['make']."' LIMIT 1;";
+				$Resultset=mysqli_query($Con, $SelectStatement);
+				if($Resultset->num_rows>0){
+					while($Result=mysqli_fetch_assoc($Resultset)){
+						if(!empty($Result)){
+							$ID['model']=$Result['row_id'];
+						}
+					}
+				}
+				//STEP-3-iv
+				//IN categories_year TABLE,  WE WILL USE $Inquiry['year'] AGAINST category_name AND $ID['model'] AGAINST row_parent_id AND WE WILL FIND $ID['year']=row_id.
+				$SelectStatement="SELECT * FROM `".$Tables['Year']."` WHERE `category_name`='".$Inquiry['year']."' AND `".$Lexicon['ParentID']."`='".$ID['model']."' LIMIT 1;";
+				$Resultset=mysqli_query($Con, $SelectStatement);
+				if($Resultset->num_rows>0){
+					while($Result=mysqli_fetch_assoc($Resultset)){
+						if(!empty($Result)){
+							$ID['year']=$Result['row_id'];
+						}
+					}
+				}
+				//STEP-3-v
+				//IN pcdb_ebay_category_map TABLE,  WE WILL USE $Inquiry['L2_category_id'] AGAINST ebay_leaf_category_id AND WE WILL FIND $CatSubcat['pcdb_category_id']=pcdb_category_id AND $CatSubcat['pcdb_subcategory_id']=pcdb_subcategory_id.
+				$CatSubcat=array();
+				$SelectStatement="SELECT * FROM `".$Tables['Map']."` WHERE `ebay_leaf_category_id`='".$Inquiry['L2_category_id']."' LIMIT 1;";
+				$Resultset=mysqli_query($Con, $SelectStatement);
+				if($Resultset->num_rows>0){					
+					while($Result=mysqli_fetch_assoc($Resultset)){
+						if(!empty($Result)){
+							$CatSubcat['pcdb_category_id']=$Result['pcdb_category_id'];
+							$CatSubcat['pcdb_subcategory_id']=$Result['pcdb_subcategory_id'];
+						}
+					}
+				}
+				//STEP-3-vi
+				//IN categories_pcdb_category TABLE,  WE WILL USE $CatSubcat['pcdb_category_id'] AGAINST pcdb_category_id AND $ID['year'] AGAINST row_parent_id AND WE WILL FIND $ID['pcdb_category_id']=row_id.
+				$SelectStatement="SELECT * FROM `".$Tables['Cat']."` WHERE `pcdb_category_id`='".$CatSubcat['pcdb_category_id']."' AND `".$Lexicon['ParentID']."`='".$ID['year']."' LIMIT 1;";
+				$Resultset=mysqli_query($Con, $SelectStatement);
+				if($Resultset->num_rows>0){					
+					while($Result=mysqli_fetch_assoc($Resultset)){
+						if(!empty($Result)){
+							$ID['pcdb_category_id']=$Result['row_id'];
+						}
+					}
+				}
+				//STEP-3-vii
+				//IN categories_pcdb_subcategory TABLE,  WE WILL USE $CatSubcat['pcdb_subcategory_id'] AGAINST pcdb_subcategory_id AND $ID['pcdb_category_id'] AGAINST row_parent_id AND WE WILL FIND $Product['category_id']=magento_category_id
+				$Product=array();// TO RESET $Product.
+				$SelectStatement="SELECT * FROM `".$Tables['Cat']."` WHERE `pcdb_subcategory_id`='".$CatSubcat['pcdb_subcategory_id']."' AND `".$Lexicon['ParentID']."`='".$ID['pcdb_category_id']."' LIMIT 1;";
+				$Resultset=mysqli_query($Con, $SelectStatement);
+				if($Resultset->num_rows>0){					
+					while($Result=mysqli_fetch_assoc($Resultset)){
+						if(!empty($Result)){
+							$Product['category_id']=$Result['magento_category_id'];
+						}
+					}
+				}
+				//CALL PRODUCT CREATION USING FEED ROW AND GET ID. THIS PRODUCT ID WILL BE USED TO ASSIGN CATEGORIES IN THIS URI-POST http://magentohost/api/rest/products/8/categories.[RFERENCE-http://devdocs.magento.com/guides/m1x/api/rest/Resources/Products/product_categories.html]
+			}//END-FEEDINDIVIDUAL
+		}//END-FEEDLOOP
+	}//END-FEEDNUM

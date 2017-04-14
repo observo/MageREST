@@ -1,0 +1,57 @@
+{
+	'module'	: {
+		'name'   : 'Eav',
+		'service'	: [
+			{
+				'name'		: 'eavAttributeSetManagementV1',
+				'methods'	: [				   
+					{
+						'verb'			: 'POST',
+						'endpoint'		: '/V1/eav/attribute-sets',
+						'partition'		: 'CE/Eav',
+						'method'		: 'CreateAttributeSets',
+						'note'			: '',
+						'description'	: ''
+					}
+				]
+			},
+			{
+				'name'		: 'eavAttributeSetRepositoryV1',
+				'methods'	: [				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/eav/attribute-sets/list',
+						'partition'		: 'CE/Eav',
+						'method'		: 'RetriveAllAttributeSets',
+						'note'			: '',
+						'description'	: ''
+					},				 
+					{
+						'verb'			: 'DELETE',
+						'endpoint'		: '/V1/eav/attribute-sets/:attributeSetId',
+						'partition'		: 'CE/Eav',
+						'method'		: 'RemoveAttributeSets',
+						'note'			: '',
+						'description'	: ''
+					},				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/eav/attribute-sets/:attributeSetId',
+						'partition'		: 'CE/Eav',
+						'method'		: 'RetriveAttributeSets',
+						'note'			: '',
+						'description'	: ''
+					},				    
+					{
+						'verb'			: 'PUT',
+						'endpoint'		: '/V1/eav/attribute-sets/:attributeSetId',
+						'partition'		: 'CE/Eav',
+						'method'		: 'UpdateAttributeSets',
+						'note'			: '',
+						'description'	: ''
+					}
+				]
+			}
+		]	
+	}		 
+}

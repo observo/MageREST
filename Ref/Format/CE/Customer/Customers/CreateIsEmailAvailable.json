@@ -1,0 +1,10 @@
+<?php
+	/*
+		PARAMETERS
+		==========
+		$body=
+			{
+			  "customerEmail": "string",
+			  "websiteId": 0
+			}
+	*/

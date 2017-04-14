@@ -1,0 +1,41 @@
+{
+	'module'	: {
+		'name'   : 'Directory',
+		'service'	: [
+			{
+				'name'		: 'directoryCountryInformationAcquirerV1',
+				'methods'	: [				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/directory/countries',
+						'partition'		: 'CE/Directory',
+						'method'		: 'RetrieveAllCountries',
+						'note'			: '',
+						'description'	: ''
+					},				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/directory/countries/:countryId',
+						'partition'		: 'CE/Directory',
+						'method'		: 'RetrieveCountries',
+						'note'			: '',
+						'description'	: ''
+					}
+				]
+			},
+			{
+				'name'		: 'directoryCurrencyInformationAcquirerV1',
+				'methods'	: [				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/directory/currency',
+						'partition'		: 'CE/Directory',
+						'method'		: 'RetrieveAllCurrency',
+						'note'			: '',
+						'description'	: ''
+					}
+				]
+			}
+		]		
+	}		
+}

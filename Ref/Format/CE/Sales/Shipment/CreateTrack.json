@@ -1,0 +1,38 @@
+<?php
+	/*
+		FORMAT
+		======
+		{
+		  "order_id": 0,
+		  "created_at": "string",
+		  "entity_id": 0,
+		  "parent_id": 0,
+		  "updated_at": "string",
+		  "weight": 0,
+		  "qty": 0,
+		  "description": "string",
+		  "extension_attributes": {},
+		  "track_number": "string",
+		  "title": "string",
+		  "carrier_code": "string"
+		}
+		PARAMETERS
+		==========
+		$body=
+			{
+			  "entity": {
+				"order_id": 0,
+				"created_at": "string",
+				"entity_id": 0,
+				"parent_id": 0,
+				"updated_at": "string",
+				"weight": 0,
+				"qty": 0,
+				"description": "string",
+				"extension_attributes": {},
+				"track_number": "string",
+				"title": "string",
+				"carrier_code": "string"
+			  }
+			}
+	*/

@@ -1,0 +1,19 @@
+<?php
+	/*
+		FORMAT
+		======
+		{
+		  "gift_message_id": 0,
+		  "customer_id": 0,
+		  "sender": "string",
+		  "recipient": "string",
+		  "message": "string",
+		  "extension_attributes": {
+			"entity_id": "string",
+			"entity_type": "string"
+		  }
+		}
+		PARAMETERS
+		==========
+		itemId
+	*/

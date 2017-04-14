@@ -1,0 +1,142 @@
+{
+	'module'	: {
+		'name'   : 'Tax',
+		'service'	: [
+			{
+				'name'		: 'taxTaxClassRepositoryV1',
+				'methods'	: [			   
+					{
+						'verb'			: 'POST',
+						'endpoint'		: '/V1/taxClasses',
+						'partition'		: 'CE/Tax/TaxClasses',
+						'method'		: 'Create',
+						'note'			: '',
+						'description'	: ''
+					},				 
+					{
+						'verb'			: 'DELETE',
+						'endpoint'		: '/V1/taxClasses/:taxClassId',
+						'partition'		: 'CE/Tax/TaxClasses',
+						'method'		: 'Remove',
+						'note'			: '',
+						'description'	: ''
+					},				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/taxClasses/:taxClassId',
+						'partition'		: 'CE/Tax/TaxClasses',
+						'method'		: 'Retrieve',
+						'note'			: '',
+						'description'	: ''
+					},				    
+					{
+						'verb'			: 'PUT',
+						'endpoint'		: '/V1/taxClasses/:classId',
+						'partition'		: 'CE/Tax/TaxClasses',
+						'method'		: 'Update',
+						'note'			: '',
+						'description'	: ''
+					},				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/taxClasses/search',
+						'partition'		: 'CE/Tax/TaxClasses',
+						'method'		: 'Search',
+						'note'			: '',
+						'description'	: ''
+					}
+				]
+			},
+			{
+				'name'		: 'taxTaxRateRepositoryV1',
+				'methods'	: [				   
+					{
+						'verb'			: 'POST',
+						'endpoint'		: '/V1/taxRates',
+						'partition'		: 'CE/Tax/TaxRates',
+						'method'		: 'Create',
+						'note'			: '',
+						'description'	: ''
+					},				    
+					{
+						'verb'			: 'PUT',
+						'endpoint'		: '/V1/taxRates',
+						'partition'		: 'CE/Tax/TaxRates',
+						'method'		: 'Update',
+						'note'			: '',
+						'description'	: ''
+					},				 
+					{
+						'verb'			: 'DELETE',
+						'endpoint'		: '/V1/taxRates/:rateId',
+						'partition'		: 'CE/Tax/TaxRates',
+						'method'		: 'Remove',
+						'note'			: '',
+						'description'	: ''
+					},				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/taxRates/:rateId',
+						'partition'		: 'CE/Tax/TaxRates',
+						'method'		: 'Retrieve',
+						'note'			: '',
+						'description'	: ''
+					},				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/taxRates/search',
+						'partition'		: 'CE/Tax/TaxRates',
+						'method'		: 'Search',
+						'note'			: '',
+						'description'	: ''
+					}
+				]
+			},
+			{
+				'name'		: 'taxTaxRuleRepositoryV1',
+				'methods'	: [				   
+					{
+						'verb'			: 'POST',
+						'endpoint'		: '/V1/taxRules',
+						'partition'		: 'CE/Tax/TaxRules',
+						'method'		: 'Create',
+						'note'			: '',
+						'description'	: ''
+					},				    
+					{
+						'verb'			: 'PUT',
+						'endpoint'		: '/V1/taxRules',
+						'partition'		: 'CE/Tax/TaxRules',
+						'method'		: 'Update',
+						'note'			: '',
+						'description'	: ''
+					},				 
+					{
+						'verb'			: 'DELETE',
+						'endpoint'		: '/V1/taxRules/:ruleId',
+						'partition'		: 'CE/Tax/TaxRules',
+						'method'		: 'Remove',
+						'note'			: '',
+						'description'	: ''
+					},				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/taxRules/:ruleId',
+						'partition'		: 'CE/Tax/TaxRules',
+						'method'		: 'Retrieve',
+						'note'			: '',
+						'description'	: ''
+					},				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/taxRules/search',
+						'partition'		: 'CE/Tax/TaxRules',
+						'method'		: 'Search',
+						'note'			: '',
+						'description'	: ''
+					}
+				]
+			}
+		]		
+	}		
+}

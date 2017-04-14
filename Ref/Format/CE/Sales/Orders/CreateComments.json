@@ -1,0 +1,20 @@
+<?php
+	/*
+		PARAMETERS
+		==========
+		id
+		$body=
+			{
+			  "statusHistory": {
+				"comment": "string",
+				"created_at": "string",
+				"entity_id": 0,
+				"entity_name": "string",
+				"is_customer_notified": 0,
+				"is_visible_on_front": 0,
+				"parent_id": 0,
+				"status": "string",
+				"extension_attributes": {}
+			  }
+			}
+	*/

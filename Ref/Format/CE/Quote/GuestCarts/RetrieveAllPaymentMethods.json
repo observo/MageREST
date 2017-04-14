@@ -1,0 +1,14 @@
+<?php
+	/*
+		FORMAT
+		======
+		[
+		  {
+			"code": "string",
+			"title": "string"
+		  }
+		]
+		PARAMETERS
+		==========
+		cartId
+	*/

@@ -1,0 +1,11 @@
+<?php
+	/*
+		PARAMETERS
+		==========
+		$body=
+			{
+			  "email": "string",
+			  "websiteId": 0,
+			  "redirectUrl": "string"
+			}
+	*/

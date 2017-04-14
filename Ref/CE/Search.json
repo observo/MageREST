@@ -1,0 +1,20 @@
+{
+	'module'	: {
+		'name'   : 'Search',
+		'service'	: [
+			{
+				'name'		: 'searchV1',
+				'methods'	: [				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/search',
+						'partition'		: 'CE/Search',
+						'method'		: 'Search',
+						'note'			: '',
+						'description'	: ''
+					}
+				]
+			}
+		]		
+	}		
+}

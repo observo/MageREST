@@ -1,0 +1,45 @@
+<?php
+	/*
+		FORMAT
+		======
+		{
+		  "items": [
+			{
+			  "comment": "string",
+			  "created_at": "string",
+			  "entity_id": 0,
+			  "entity_name": "string",
+			  "is_customer_notified": 0,
+			  "is_visible_on_front": 0,
+			  "parent_id": 0,
+			  "status": "string",
+			  "extension_attributes": {}
+			}
+		  ],
+		  "search_criteria": {
+			"filter_groups": [
+			  {
+				"filters": [
+				  {
+					"field": "string",
+					"value": "string",
+					"condition_type": "string"
+				  }
+				]
+			  }
+			],
+			"sort_orders": [
+			  {
+				"field": "string",
+				"direction": "string"
+			  }
+			],
+			"page_size": 0,
+			"current_page": 0
+		  },
+		  "total_count": 0
+		}
+		PARAMETERS
+		==========
+		id
+	*/

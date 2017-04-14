@@ -1,0 +1,97 @@
+{
+	'module'	: {
+		'name'   : 'Cms',
+		'service'	: [
+			{
+				'name'		: 'cmsBlockRepositoryV1',
+				'methods'	: [				 
+					{
+						'verb'			: 'DELETE',
+						'endpoint'		: '/V1/cmsBlock/:blockId',
+						'partition'		: 'CE/Cms/CmsBlock',
+						'method'		: 'Remove',
+						'note'			: '',
+						'description'	: ''
+					},				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/cmsBlock/:blockId',
+						'partition'		: 'CE/Cms/CmsBlock',
+						'method'		: 'Retrieve',
+						'note'			: '',
+						'description'	: ''
+					},				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/cmsBlock/search',
+						'partition'		: 'CE/Cms/CmsBlock',
+						'method'		: 'Search',
+						'note'			: '',
+						'description'	: ''
+					},				   
+					{
+						'verb'			: 'POST',
+						'endpoint'		: '/V1/cmsBlock',
+						'partition'		: 'CE/Cms/CmsBlock',
+						'method'		: 'Create',
+						'note'			: '',
+						'description'	: ''
+					},				    
+					{
+						'verb'			: 'PUT',
+						'endpoint'		: '/V1/cmsBlock/:id',
+						'partition'		: 'CE/Cms/CmsBlock',
+						'method'		: 'Update',
+						'note'			: '',
+						'description'	: ''
+					}
+				]
+			},
+			{
+				'name'		: 'cmsPageRepositoryV1',
+				'methods'	: [				 
+					{
+						'verb'			: 'DELETE',
+						'endpoint'		: '/V1/cmsPage/:pageId',
+						'partition'		: 'CE/Cms/CmsPage',
+						'method'		: 'Remove',
+						'note'			: '',
+						'description'	: ''
+					},				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/cmsPage/:pageId',
+						'partition'		: 'CE/Cms/CmsPage',
+						'method'		: 'Retrieve',
+						'note'			: '',
+						'description'	: ''
+					},				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/cmsPage/search',
+						'partition'		: 'CE/Cms/CmsPage',
+						'method'		: 'Search',
+						'note'			: '',
+						'description'	: ''
+					},				   
+					{
+						'verb'			: 'POST',
+						'endpoint'		: '/V1/cmsPage',
+						'partition'		: 'CE/Cms/CmsPage',
+						'method'		: 'Create',
+						'note'			: '',
+						'description'	: ''
+					},				    
+					{
+						'verb'			: 'PUT',
+						'endpoint'		: '/V1/cmsPage/:id',
+						'partition'		: 'CE/Cms/CmsPage',
+						'method'		: 'Update',
+						'note'			: '',
+						'description'	: ''
+					}
+				]
+			}
+		]		
+	}		
+}

@@ -1,0 +1,29 @@
+<?php
+	/*
+		FORMAT
+		======
+		{
+		  "id": 0,
+		  "identifier": "string",
+		  "title": "string",
+		  "content": "string",
+		  "creation_time": "string",
+		  "update_time": "string",
+		  "active": true
+		}
+		PARAMETERS
+		==========
+		id
+		$body=
+			{
+			  "block": {
+				"id": 0,
+				"identifier": "string",
+				"title": "string",
+				"content": "string",
+				"creation_time": "string",
+				"update_time": "string",
+				"active": true
+			  }
+			}
+	*/

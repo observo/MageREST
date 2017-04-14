@@ -1,0 +1,33 @@
+{
+	'module'	: {
+		'name'   : 'Integration',
+		'service'	: [
+			{
+				'name'		: 'integrationAdminTokenServiceV1',
+				'methods'	: [				   
+					{
+						'verb'			: 'POST',
+						'endpoint'		: '/V1/integration/admin/token',
+						'partition'		: 'CE/Integration',
+						'method'		: 'AdminToken',
+						'note'			: '',
+						'description'	: ''
+					}
+				]
+			},
+			{
+				'name'		: 'integrationCustomerTokenServiceV1',
+				'methods'	: [				   
+					{
+						'verb'			: 'POST',
+						'endpoint'		: '/V1/integration/customer/token',
+						'partition'		: 'CE/Integration',
+						'method'		: 'CustomerToken',
+						'note'			: '',
+						'description'	: ''
+					}
+				]
+			}
+		]	
+	}		
+}

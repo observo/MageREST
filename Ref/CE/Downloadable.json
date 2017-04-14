@@ -1,0 +1,81 @@
+{
+	'module'	: {
+		'name'   : 'Downloadable',
+		'service'	: [
+			{
+				'name'		: 'downloadableLinkRepositoryV1',
+				'methods'	: [				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/products/:sku/downloadable-links',
+						'partition'		: 'CE/Downloadable',
+						'method'		: 'RetrieveAllDownloadableLinks',
+						'note'			: '',
+						'description'	: ''
+					},				   
+					{
+						'verb'			: 'POST',
+						'endpoint'		: '/V1/products/:sku/downloadable-links',
+						'partition'		: 'CE/Downloadable',
+						'method'		: 'CreateDownloadableLinks',
+						'note'			: '',
+						'description'	: ''
+					},				    
+					{
+						'verb'			: 'PUT',
+						'endpoint'		: '/V1/products/:sku/downloadable-links/:id',
+						'partition'		: 'CE/Downloadable',
+						'method'		: 'UpdateDownloadableLinks',
+						'note'			: '',
+						'description'	: ''
+					},				 
+					{
+						'verb'			: 'DELETE',
+						'endpoint'		: '/V1/products/downloadable-links/:id',
+						'partition'		: 'CE/Downloadable',
+						'method'		: 'RemoveDownloadableLinks',
+						'note'			: '',
+						'description'	: ''
+					}
+				]
+			},
+			{
+				'name'		: 'downloadableSampleRepositoryV1',
+				'methods'	: [				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/products/:sku/downloadable-links/samples',
+						'partition'		: 'CE/Downloadable',
+						'method'		: 'RetrieveAllDownloadableLinksSamples',
+						'note'			: '',
+						'description'	: ''
+					},				   
+					{
+						'verb'			: 'POST',
+						'endpoint'		: '/V1/products/:sku/downloadable-links/samples',
+						'partition'		: 'CE/Downloadable',
+						'method'		: 'CreateDownloadableLinksSamples',
+						'note'			: '',
+						'description'	: ''
+					},				    
+					{
+						'verb'			: 'PUT',
+						'endpoint'		: '/V1/products/:sku/downloadable-links/samples/:id',
+						'partition'		: 'CE/Downloadable',
+						'method'		: 'UpdateDownloadableLinksSamples',
+						'note'			: '',
+						'description'	: ''
+					},				 
+					{
+						'verb'			: 'DELETE',
+						'endpoint'		: '/V1/products/downloadable-links/samples/:id',
+						'partition'		: 'CE/Downloadable',
+						'method'		: 'RemoveDownloadableLinksSamples',
+						'note'			: '',
+						'description'	: ''
+					}
+				]
+			}
+		]		
+	}		
+}

@@ -1,0 +1,94 @@
+{
+	'module'	: {
+		'name'   : 'ConfigurableProduct',
+		'service'	: [
+			{
+				'name'		: 'configurableProductConfigurableProductManagementV1',
+				'methods'	: [				    
+					{
+						'verb'			: 'PUT',
+						'endpoint'		: '/V1/configurable-products/variation',
+						'partition'		: 'CE/ConfigurableProduct',
+						'method'		: 'UpdateVariation',
+						'note'			: '',
+						'description'	: ''
+					}
+				]
+			},
+			{
+				'name'		: 'configurableProductLinkManagementV1',
+				'methods'	: [				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/configurable-products/:sku/children',
+						'partition'		: 'CE/ConfigurableProduct',
+						'method'		: 'RetrieveAllChildren',
+						'note'			: '',
+						'description'	: ''
+					},				 
+					{
+						'verb'			: 'DELETE',
+						'endpoint'		: '/V1/configurable-products/:sku/children/:childSku',
+						'partition'		: 'CE/ConfigurableProduct',
+						'method'		: 'RemoveChildren',
+						'note'			: '',
+						'description'	: ''
+					},				   
+					{
+						'verb'			: 'POST',
+						'endpoint'		: '/V1/configurable-products/:sku/child',
+						'partition'		: 'CE/ConfigurableProduct',
+						'method'		: 'CreateChild',
+						'note'			: '',
+						'description'	: ''
+					}
+				]
+			},
+			{
+				'name'		: 'configurableProductOptionRepositoryV1',
+				'methods'	: [				 
+					{
+						'verb'			: 'DELETE',
+						'endpoint'		: '/V1/configurable-products/:sku/options/:id',
+						'partition'		: 'CE/ConfigurableProduct',
+						'method'		: 'RemoveOptions',
+						'note'			: '',
+						'description'	: ''
+					},				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/configurable-products/:sku/options/:id',
+						'partition'		: 'CE/ConfigurableProduct',
+						'method'		: 'RetrieveOptions',
+						'note'			: '',
+						'description'	: ''
+					},				    
+					{
+						'verb'			: 'PUT',
+						'endpoint'		: '/V1/configurable-products/:sku/options/:id',
+						'partition'		: 'CE/ConfigurableProduct',
+						'method'		: 'UpdateOptions',
+						'note'			: '',
+						'description'	: ''
+					},				    
+					{
+						'verb'			: 'GET',
+						'endpoint'		: '/V1/configurable-products/:sku/options/all',
+						'partition'		: 'CE/ConfigurableProduct',
+						'method'		: 'RetrieveAllOptionsAll',
+						'note'			: '',
+						'description'	: ''
+					},				   
+					{
+						'verb'			: 'POST',
+						'endpoint'		: '/V1/configurable-products/:sku/options',
+						'partition'		: 'CE/ConfigurableProduct',
+						'method'		: 'CreateOptions',
+						'note'			: '',
+						'description'	: ''
+					}
+				]
+			}
+		]		
+	}		
+}

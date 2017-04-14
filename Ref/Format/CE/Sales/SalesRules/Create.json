@@ -1,0 +1,134 @@
+<?php
+	/*
+		FORMAT
+		======
+		{
+		  "rule_id": 0,
+		  "name": "string",
+		  "store_labels": [
+			{
+			  "store_id": 0,
+			  "store_label": "string",
+			  "extension_attributes": {}
+			}
+		  ],
+		  "description": "string",
+		  "website_ids": [
+			0
+		  ],
+		  "customer_group_ids": [
+			0
+		  ],
+		  "from_date": "string",
+		  "to_date": "string",
+		  "uses_per_customer": 0,
+		  "is_active": true,
+		  "condition": {
+			"condition_type": "string",
+			"conditions": [
+			  {}
+			],
+			"aggregator_type": "string",
+			"operator": "string",
+			"attribute_name": "string",
+			"value": "string",
+			"extension_attributes": {}
+		  },
+		  "action_condition": {
+			"condition_type": "string",
+			"conditions": [
+			  {}
+			],
+			"aggregator_type": "string",
+			"operator": "string",
+			"attribute_name": "string",
+			"value": "string",
+			"extension_attributes": {}
+		  },
+		  "stop_rules_processing": true,
+		  "is_advanced": true,
+		  "product_ids": [
+			0
+		  ],
+		  "sort_order": 0,
+		  "simple_action": "string",
+		  "discount_amount": 0,
+		  "discount_qty": 0,
+		  "discount_step": 0,
+		  "apply_to_shipping": true,
+		  "times_used": 0,
+		  "is_rss": true,
+		  "coupon_type": "string",
+		  "use_auto_generation": true,
+		  "uses_per_coupon": 0,
+		  "simple_free_shipping": "string",
+		  "extension_attributes": {}
+		}
+		PARAMETERS
+		==========
+		$body=
+			{
+			  "rule": {
+				"rule_id": 0,
+				"name": "string",
+				"store_labels": [
+				  {
+					"store_id": 0,
+					"store_label": "string",
+					"extension_attributes": {}
+				  }
+				],
+				"description": "string",
+				"website_ids": [
+				  0
+				],
+				"customer_group_ids": [
+				  0
+				],
+				"from_date": "string",
+				"to_date": "string",
+				"uses_per_customer": 0,
+				"is_active": true,
+				"condition": {
+				  "condition_type": "string",
+				  "conditions": [
+					{}
+				  ],
+				  "aggregator_type": "string",
+				  "operator": "string",
+				  "attribute_name": "string",
+				  "value": "string",
+				  "extension_attributes": {}
+				},
+				"action_condition": {
+				  "condition_type": "string",
+				  "conditions": [
+					{}
+				  ],
+				  "aggregator_type": "string",
+				  "operator": "string",
+				  "attribute_name": "string",
+				  "value": "string",
+				  "extension_attributes": {}
+				},
+				"stop_rules_processing": true,
+				"is_advanced": true,
+				"product_ids": [
+				  0
+				],
+				"sort_order": 0,
+				"simple_action": "string",
+				"discount_amount": 0,
+				"discount_qty": 0,
+				"discount_step": 0,
+				"apply_to_shipping": true,
+				"times_used": 0,
+				"is_rss": true,
+				"coupon_type": "string",
+				"use_auto_generation": true,
+				"uses_per_coupon": 0,
+				"simple_free_shipping": "string",
+				"extension_attributes": {}
+			  }
+			}
+	*/

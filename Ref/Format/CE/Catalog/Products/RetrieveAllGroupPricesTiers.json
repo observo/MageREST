@@ -1,0 +1,17 @@
+<?php
+	/*
+		FORMAT
+		======
+		[
+		  {
+			"customer_group_id": 0,
+			"qty": 0,
+			"value": 0,
+			"extension_attributes": {}
+		  }
+		]
+		PARAMETERS
+		==========
+		sku
+		customerGroupId
+	*/

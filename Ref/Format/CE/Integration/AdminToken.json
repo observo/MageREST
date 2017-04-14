@@ -1,0 +1,51 @@
+<?php
+	//SCRIPT VARIABLES
+	set_time_limit(0);
+	ini_set('memory_limit', '-1');
+	
+	//REQUIRED FILES
+	require_once(__DIR__.'/../../../Config/Config.php');
+	require_once(__DIR__.'/../../../Helper/Helper.php');
+	require_once(__DIR__.'/../../../Helper/CE/Integration.Integration.php');
+	
+	//CONFIG VARIABLES
+	$Payload['Config']=$Config;
+	
+	//PAYLOAD DATA
+	$Login = array('username'=>$Config['credentials']['username'], 'password'=>$Config['credentials']['password']);
+	$Payload['Login']=$Login;
+	
+	$Integration=new Integration();
+	$AccessToken=$Integration->AdminToken($Payload);
+	//print_r($AccessToken);
+	
+	//ENTITY
+	$Entity=array(
+		'AccessToken'=>$AccessToken
+	);
+	
+	//CONDITION
+	$Condition=array(
+		'username'=>$Config['credentials']['username'],
+		'password'=>$Config['credentials']['password']		
+	);
+	
+	$M2Tables=array(
+		'Admin'=>'Token'
+	);
+	
+	//DB CONNECTION
+	$Con = new mysqli($Config['db']['host'], $Config['db']['user'], $Config['db']['password'], $Config['db']['database']);
+	//CHECK CONNECTION
+	if ($Con->connect_error){
+		die("Connection failed: " . $Con->connect_error);
+	}
+	
+	$ID=Exists($Con, $M2Tables['Admin'], $Condition);
+	if(!$ID){
+		//INSERT
+		Insert($Con, $M2Tables['Admin'], array_merge($Entity, $Condition));
+	}else{
+		//UPDATE 
+		Update($Con, $M2Tables['Admin'], $ID, $Entity);
+	}		

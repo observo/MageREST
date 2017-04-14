@@ -1,0 +1,15 @@
+<?php
+	/*
+		FORMAT
+		======
+		[
+		  {
+			"id": 0,
+			"website_id": 0,
+			"root_category_id": 0,
+			"default_store_id": 0,
+			"name": "string",
+			"extension_attributes": {}
+		  }
+		]
+	*/

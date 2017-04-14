@@ -1,0 +1,18 @@
+<?php
+	/*
+		FORMAT
+		======
+		[
+		  {
+			"agreement_id": 0,
+			"name": "string",
+			"content": "string",
+			"content_height": "string",
+			"checkbox_text": "string",
+			"is_active": true,
+			"is_html": true,
+			"mode": 0,
+			"extension_attributes": {}
+		  }
+		]
+	*/

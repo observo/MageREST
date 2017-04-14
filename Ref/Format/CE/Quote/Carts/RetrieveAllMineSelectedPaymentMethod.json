@@ -1,0 +1,17 @@
+<?php
+	/*
+		FORMAT
+		======
+		{
+		  "po_number": "string",
+		  "method": "string",
+		  "additional_data": [
+			"string"
+		  ],
+		  "extension_attributes": {
+			"agreement_ids": [
+			  "string"
+			]
+		  }
+		}
+	*/
